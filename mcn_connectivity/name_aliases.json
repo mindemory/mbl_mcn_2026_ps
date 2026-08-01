@@ -1,0 +1,24 @@
+{
+  "_comment": "Maps spelling variants of a person's name (as they appear in the MBL archive rosters) to a single canonical name. Applied before author resolution and graph rendering so that one real person is one node and their collaborations land on it. Keys beginning with an underscore are ignored by the tooling. Format: \"variant as scraped\": \"canonical name\". Extend as new duplicates are spotted.",
+
+  "Rudolfo Llina": "Rodolfo R Llinas",
+  "Rudolfo R Llinas": "Rodolfo R Llinas",
+
+  "Terrance Sejnowski": "Terrence J Sejnowski",
+  "Terrence Sejnowski": "Terrence J Sejnowski",
+
+  "Laurence Abbott": "Larry Abbott",
+  "Lawrence Abbott": "Larry Abbott",
+
+  "Michael Berry Ii": "Michael Berry",
+
+  "Rob De Ruyter": "Robert De Ruyter Van Steveninck",
+  "Robert De Ruyter": "Robert De Ruyter Van Steveninck",
+  "Rob De Ruyter Van Steveninck": "Robert De Ruyter Van Steveninck",
+
+  "Bill Bialek": "William Bialek",
+
+  "Evelyn Marder": "Eve Marder",
+
+  "Richard Anderson": "Richard Andersen"
+}

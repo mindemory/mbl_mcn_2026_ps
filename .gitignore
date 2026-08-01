@@ -64,3 +64,6 @@ octave-workspace
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Claude
+.claude

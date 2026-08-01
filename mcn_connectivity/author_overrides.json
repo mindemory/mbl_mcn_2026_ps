@@ -1,0 +1,10 @@
+{
+  "_comment": "Manual overrides that take precedence over automatic author resolution. Use this to pin a person to the correct scholarly identity, or to skip people who cannot be resolved reliably. Keys are canonical names (after name_aliases.json is applied). Keys beginning with an underscore are ignored. Populate this from resolution_review.csv after inspecting low-confidence or wrong matches.",
+
+  "_format": {
+    "Some Person": { "openalex_id": "A5012345678", "orcid": "0000-0002-1825-0097" },
+    "Ambiguous Name": { "skip": true }
+  },
+
+  "Larry Abbott": { "openalex_id": "A5079185098", "orcid": "0000-0003-1163-5688" }
+}
