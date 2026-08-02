@@ -22,14 +22,11 @@ python3 -m http.server 8787
 ## Features
 
 - **Connections** — toggle between **Co-attendance**, **Co-authorship**, or **Both** edge layers
-- **Color by year** — each cohort gets a distinct color; multi-year attendees shown in white
-- **Color by role** — directors, faculty, lecturers, TAs, students each colored distinctly
-- **Color by connections** — viridis scale showing high-degree nodes
-- **Year filter** — isolate a specific cohort
-- **Role filter** — see only students, only faculty, etc.
-- **Force / Radial layout** — toggle between physics simulation and ring layout
+- **Color by year / role / domain / connections** — including by **research domain** (OpenAlex subfield)
+- **Year / Role / Domain filters** — isolate a cohort, a role, or a research area
+- **Force / Radial / Domains layout** — physics, ring-by-year, or clustered-by-research-domain
 - **Search** — highlight by name or affiliation (searches career data too)
-- **Click any node** — detail panel shows MCN appearances, co-authors (with shared-paper counts), and scholarly-profile links
+- **Click any node** — detail panel shows research areas, MCN appearances, co-authors (with shared-paper counts), and scholarly-profile links
 - **Drag nodes** — fully interactive
 
 ## Data pipeline
@@ -68,13 +65,28 @@ Outputs:
 | File | Committed? | Purpose |
 |------|-----------|---------|
 | `collabs.js` | yes | co-authorship edges consumed by the graph |
+| `domains.js` | yes | per-person research domains consumed by the graph |
 | `resolution_review.csv` | no | every person + confidence, **sorted worst-first** — inspect this |
 | `resolved_authors.json` | no | machine-readable resolution results |
 | `cache/` | no | cached API responses (safe to delete) |
 
+### 3. Research domains — `enrich_domains.py`
+
+Labels each resolved person with their research domain (their top OpenAlex topic's **subfield**, e.g. *Cognitive Neuroscience*, *Artificial Intelligence*), writing `domains.js`. This powers the Domain color mode, the Domain filter, and the Domains layout.
+
+```bash
+python3 enrich_domains.py            # reads resolved_authors.json, writes domains.js
+```
+
+**Free:** it fetches author records by id, and single-record lookups cost 0 OpenAlex credits (only searches/filtered lists are billed). Run it any time after `enrich_collabs.py`.
+
 ### ⚠️ Coverage caveat
 
 Author name disambiguation is hard and coverage is uneven. Old cohorts, people who left academia, non-publishers, and the deceased resolve poorly, so the co-authorship layer **over-represents recent, prolific academics**. The absence of an edge does **not** mean two people never collaborated. Curate `author_overrides.json` and `name_aliases.json` from `resolution_review.csv` to improve accuracy over time.
+
+### 💳 OpenAlex credits
+
+OpenAlex bills **10 credits per search** (`/authors?search=`) but only **1 credit per filtered list** (`/works?filter=`), and **single-record GETs are free**. The free plan is $1/day = 10,000 credits. Resolving all ~1,000 names is the expensive step (~10k credits), so **never use `--refresh`** — cached searches and `resolved_authors.json` are the costly asset. A full edges re-run costs only ~1,500 credits; the domains run costs ~0.
 
 ## Data sources
 
@@ -100,8 +112,10 @@ mcn_connectivity/
 ├── data.js               # MCN roster data + career annotations (generated)
 ├── mcn_roster.json       # Machine-readable rosters (generated)
 ├── collabs.js            # Co-authorship edges (generated)
+├── domains.js            # Per-person research domains (generated)
 ├── scrape_mcn.py         # Roster scraper
 ├── enrich_collabs.py     # Co-authorship resolver / edge builder
+├── enrich_domains.py     # Research-domain labeler (free)
 ├── name_aliases.json     # Spelling-variant → canonical name map (manual)
 ├── author_overrides.json # Pin/skip scholarly identities (manual)
 └── README.md

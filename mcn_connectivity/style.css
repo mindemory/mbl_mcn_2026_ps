@@ -180,6 +180,21 @@ html, body {
   transform: none;
 }
 
+/* Research-domain filter dropdown */
+.domain-select {
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-control);
+  color: var(--text-primary);
+  font-size: 12px; font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  max-width: 200px;
+}
+.domain-select:hover:not(:disabled) { border-color: var(--border-hi); }
+.domain-select:disabled { opacity: 0.4; cursor: not-allowed; }
+
 .search-group { flex-grow: 1; min-width: 180px; }
 
 .search-wrap {
@@ -445,6 +460,23 @@ html, body {
   text-decoration: none;
 }
 .detail-ident-links a:hover { text-decoration: underline; }
+
+/* Research areas: primary domain + topic chips. */
+.detail-domain {
+  font-size: 13px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.detail-topics {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.detail-topic-chip {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-control);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
 
 .detail-career-box {
   padding: 10px 12px;

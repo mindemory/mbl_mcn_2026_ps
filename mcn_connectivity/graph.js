@@ -63,6 +63,40 @@
     }
   }
 
+  // ── Research-domain data (optional) ────────
+  // domains.js defines MCN_DOMAINS = { subfields:[{name,count}], byPerson }.
+  // Absent → the Domain color/filter/layout simply stay unavailable.
+  const DOMAINS = (typeof MCN_DOMAINS !== "undefined") ? MCN_DOMAINS : null;
+  const HAS_DOMAINS = !!(DOMAINS && DOMAINS.byPerson);
+  const OTHER_DOMAIN = "Other";
+  const OTHER_COLOR = "#64748b"; // slate grey for unlabeled / long-tail domains
+
+  // A person's primary research domain (subfield), or null.
+  function domainOf(name) {
+    return (HAS_DOMAINS && DOMAINS.byPerson[name] && DOMAINS.byPerson[name].domain) || null;
+  }
+
+  // Raw subfields outnumber distinguishable colors, so give the most common
+  // TOP_DOMAINS a distinct categorical hue and fold the long tail into "Other".
+  const TOP_DOMAINS = 14;
+  const DOMAIN_PALETTE = [
+    "#60a5fa", "#f97316", "#34d399", "#a78bfa", "#f472b6", "#facc15",
+    "#22d3ee", "#fb7185", "#4ade80", "#c084fc", "#fdba74", "#38bdf8",
+    "#e879f9", "#2dd4bf",
+  ];
+  const domainColorMap = new Map(); // subfield → color (top ones only)
+  const legendDomains = [];         // [{name, color}] shown in the legend
+  if (HAS_DOMAINS && DOMAINS.subfields) {
+    DOMAINS.subfields.slice(0, TOP_DOMAINS).forEach((s, i) => {
+      const color = DOMAIN_PALETTE[i % DOMAIN_PALETTE.length];
+      domainColorMap.set(s.name, color);
+      legendDomains.push({ name: s.name, color });
+    });
+  }
+  function subfieldColor(name) {
+    return domainColorMap.get(name) || OTHER_COLOR;
+  }
+
   // ── State ──────────────────────────────────
   let state = {
     selectedYears: new Set(["all"]),
@@ -71,6 +105,7 @@
     // or "both". Default to showing both when co-authorship data is present.
     edgeMode:      HAS_COLLABS ? "both" : "attend",
     colorBy:       "year",
+    selectedDomain:"all",
     layout:        "force",
     searchQuery:   "",
     selectedNode:  null,
@@ -124,6 +159,11 @@
     let nodes = Array.from(personMap.values());
     if (roleFilter !== "all") {
       nodes = nodes.filter(n => n.primaryRole === roleFilter);
+    }
+
+    // Filter by research domain if needed
+    if (state.selectedDomain !== "all") {
+      nodes = nodes.filter(n => domainOf(n.id) === state.selectedDomain);
     }
 
     const nodeSet = new Set(nodes.map(n => n.id));
@@ -192,6 +232,9 @@
     if (state.colorBy === "role") {
       return ROLE_COLORS[d.primaryRole] || "#64748b";
     }
+    if (state.colorBy === "domain") {
+      return subfieldColor(domainOf(d.id));
+    }
     if (state.colorBy === "degree") {
       return d3.interpolateViridis(Math.min(d.degree / 50, 1));
     }
@@ -234,6 +277,18 @@
         item.innerHTML = `<div class="legend-dot" style="background:${c}"></div><span>${r.charAt(0).toUpperCase() + r.slice(1)}</span>`;
         el.appendChild(item);
       }
+    } else if (state.colorBy === "domain") {
+      // Top subfields get named swatches; the long tail is "Other".
+      for (const { name, color } of legendDomains) {
+        const item = document.createElement("div");
+        item.className = "legend-item";
+        item.innerHTML = `<div class="legend-dot" style="background:${color}"></div><span>${name}</span>`;
+        el.appendChild(item);
+      }
+      const other = document.createElement("div");
+      other.className = "legend-item";
+      other.innerHTML = `<div class="legend-dot" style="background:${OTHER_COLOR}"></div><span>${OTHER_DOMAIN}</span>`;
+      el.appendChild(other);
     } else {
       for (const [label, t] of [["Low", 0], ["Mid", 0.5], ["High", 1]]) {
         const item = document.createElement("div");
@@ -381,9 +436,11 @@
       .alpha(1)
       .on("tick", ticked);
 
-    // Radial layout override
+    // Layout overrides
     if (state.layout === "radial") {
       applyRadialLayout(nodes, links, W, H);
+    } else if (state.layout === "domains") {
+      applyDomainLayout(nodes, W, H);
     }
 
     // Click outside to deselect
@@ -446,6 +503,41 @@
     }, 100);
   }
 
+  // ── Domain-cluster layout ──────────────────
+  // Each research domain gets an anchor on a ring; nodes are pulled toward
+  // their domain's anchor with forceX/forceY, so groups cluster but stay
+  // draggable and physics-driven (unlike the fixed radial layout).
+  function applyDomainLayout(nodes, W, H) {
+    if (!simulation) return;
+    // Stable anchor per domain label (top domains + "Other").
+    const labels = [...legendDomains.map(d => d.name), OTHER_DOMAIN];
+    const anchors = {};
+    const R = Math.min(W, H) * 0.40;
+    const cx = W / 2, cy = H / 2;
+    labels.forEach((label, i) => {
+      const angle = (i / labels.length) * 2 * Math.PI;
+      anchors[label] = { x: cx + R * Math.cos(angle), y: cy + R * Math.sin(angle) };
+    });
+    const anchorFor = n => {
+      const dom = domainOf(n.id);
+      return anchors[dom] || anchors[OTHER_DOMAIN];
+    };
+    simulation
+      .force("x", d3.forceX(n => anchorFor(n).x).strength(0.25))
+      .force("y", d3.forceY(n => anchorFor(n).y).strength(0.25))
+      .force("center", null)
+      .alpha(0.9).restart();
+  }
+
+  // Remove the domain-cluster forces (used when leaving that layout).
+  function clearDomainLayout(W, H) {
+    if (!simulation) return;
+    simulation
+      .force("x", null)
+      .force("y", null)
+      .force("center", d3.forceCenter(W / 2, H / 2));
+  }
+
   // ── Tooltip ────────────────────────────────
   function showTooltip(event, d) {
     const tip = document.getElementById("tooltip");
@@ -461,12 +553,14 @@
         if (e.source === d.id || e.target === d.id) collabCount++;
       }
     }
+    const domain = domainOf(d.id);
     tip.innerHTML = `
       <div class="tooltip-name">${d.name}</div>
       <div class="tooltip-meta">
         <b style="color:${ROLE_COLORS[d.primaryRole]}">${d.primaryRole}</b>
         ${career ? ` · ${career.affiliation}` : ""}
       </div>
+      ${domain ? `<div class="tooltip-meta"><span style="color:${subfieldColor(domain)}">◆</span> ${domain}</div>` : ""}
       <div class="tooltip-meta">${d.degree} connection${d.degree !== 1 ? "s" : ""}${
         HAS_COLLABS ? ` · ${collabCount} co-author${collabCount !== 1 ? "s" : ""}` : ""
       }</div>
@@ -589,6 +683,12 @@
       if (ident.orcid)    identLinks.push(`<a href="https://orcid.org/${ident.orcid}" target="_blank">ORCID</a>`);
     }
 
+    // Research areas (primary domain + top topics), when available.
+    const domainInfo = (HAS_DOMAINS && DOMAINS.byPerson[d.name]) || null;
+    const domain = domainInfo && domainInfo.domain;
+    const topicChips = (domainInfo && domainInfo.topics || []).map(t =>
+      `<span class="detail-topic-chip">${t}</span>`).join("");
+
     const neighborNodes = allNodes.filter(n => {
       if (n.id === d.id) return false;
       return allLinks.some(l => {
@@ -617,6 +717,13 @@
           <div class="detail-career-institution">${career.affiliation}</div>
           <div class="detail-career-role">${career.role}</div>
         </div>
+      </div>` : ""}
+
+      ${domain ? `
+      <div class="detail-section">
+        <div class="detail-section-title">Research areas</div>
+        <div class="detail-domain" style="color:${subfieldColor(domain)}">◆ ${domain}</div>
+        ${topicChips ? `<div class="detail-topics">${topicChips}</div>` : ""}
       </div>` : ""}
 
       ${identLinks.length ? `
@@ -773,20 +880,71 @@
 
   // ── Layout buttons ─────────────────────────
   function initLayoutButtons() {
-    document.getElementById("btnForce").onclick = () => {
+    const btns = {
+      force:   document.getElementById("btnForce"),
+      radial:  document.getElementById("btnRadial"),
+      domains: document.getElementById("btnDomains"),
+    };
+    const setActive = mode => {
+      for (const [k, b] of Object.entries(btns)) {
+        if (b) b.classList.toggle("active", k === mode);
+      }
+    };
+    btns.force.onclick = () => {
       state.layout = "force";
-      document.getElementById("btnForce").classList.add("active");
-      document.getElementById("btnRadial").classList.remove("active");
-      // Release all fixed positions
+      setActive("force");
+      clearDomainLayout(width(), height());
       if (allNodes) allNodes.forEach(n => { n.fx = null; n.fy = null; });
       if (simulation) simulation.alpha(0.8).restart();
     };
-    document.getElementById("btnRadial").onclick = () => {
+    btns.radial.onclick = () => {
       state.layout = "radial";
-      document.getElementById("btnForce").classList.remove("active");
-      document.getElementById("btnRadial").classList.add("active");
+      setActive("radial");
+      clearDomainLayout(width(), height());
       if (allNodes && allLinks) applyRadialLayout(allNodes, allLinks, width(), height());
     };
+    if (btns.domains) {
+      btns.domains.disabled = !HAS_DOMAINS;
+      if (!HAS_DOMAINS) btns.domains.title = "Run enrich_domains.py to enable";
+      btns.domains.onclick = () => {
+        if (btns.domains.disabled) return;
+        state.layout = "domains";
+        setActive("domains");
+        if (allNodes) allNodes.forEach(n => { n.fx = null; n.fy = null; });
+        applyDomainLayout(allNodes, width(), height());
+      };
+    }
+  }
+
+  // ── Domain filter (research-area dropdown) ──
+  function initDomainFilter() {
+    const sel = document.getElementById("domainFilter");
+    if (!sel) return;
+    if (!HAS_DOMAINS || !DOMAINS.subfields) {
+      sel.disabled = true;
+      sel.title = "Run enrich_domains.py to enable";
+      return;
+    }
+    for (const s of DOMAINS.subfields) {
+      const opt = document.createElement("option");
+      opt.value = s.name;
+      opt.textContent = `${s.name} (${s.count})`;
+      sel.appendChild(opt);
+    }
+    sel.addEventListener("change", () => {
+      state.selectedDomain = sel.value;
+      clearSelection(); closeDetail();
+      render();
+    });
+  }
+
+  // Disable the Domain color pill when there's no domain data.
+  function initDomainColorPill() {
+    const btn = document.querySelector('#colorByPills [data-colorby="domain"]');
+    if (btn && !HAS_DOMAINS) {
+      btn.disabled = true;
+      btn.title = "Run enrich_domains.py to enable";
+    }
   }
 
   // ── Search input ───────────────────────────
@@ -815,6 +973,8 @@
     initRoleButtons();
     initEdgeModeButtons();
     initColorByButtons();
+    initDomainColorPill();
+    initDomainFilter();
     initLayoutButtons();
     initSearch();
     render();
