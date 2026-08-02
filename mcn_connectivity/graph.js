@@ -84,14 +84,18 @@
     "#22d3ee", "#fb7185", "#4ade80", "#c084fc", "#fdba74", "#38bdf8",
     "#e879f9", "#2dd4bf",
   ];
-  const domainColorMap = new Map(); // subfield → color (top ones only)
+  const domainColorMap = new Map(); // domain → color (top ones only)
   const legendDomains = [];         // [{name, color}] shown in the legend
   if (HAS_DOMAINS && DOMAINS.subfields) {
-    DOMAINS.subfields.slice(0, TOP_DOMAINS).forEach((s, i) => {
-      const color = DOMAIN_PALETTE[i % DOMAIN_PALETTE.length];
+    let ci = 0;
+    for (const s of DOMAINS.subfields) {
+      if (s.name === OTHER_DOMAIN) continue;       // "Other" is always grey, shown once
+      if (ci >= TOP_DOMAINS) break;
+      const color = DOMAIN_PALETTE[ci % DOMAIN_PALETTE.length];
       domainColorMap.set(s.name, color);
       legendDomains.push({ name: s.name, color });
-    });
+      ci++;
+    }
   }
   function subfieldColor(name) {
     return domainColorMap.get(name) || OTHER_COLOR;

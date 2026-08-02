@@ -7,421 +7,54 @@
 const MCN_DOMAINS = {
   "subfields": [
     {
-      "name": "Cognitive Neuroscience",
-      "count": 428
+      "name": "Sensory & Perception",
+      "count": 212
     },
     {
-      "name": "Cellular and Molecular Neuroscience",
-      "count": 102
+      "name": "Cellular & Molecular",
+      "count": 162
     },
     {
-      "name": "Molecular Biology",
-      "count": 50
+      "name": "Cognitive & Behavioral",
+      "count": 159
     },
     {
-      "name": "Artificial Intelligence",
-      "count": 30
+      "name": "Other",
+      "count": 152
     },
     {
-      "name": "Neurology",
-      "count": 18
+      "name": "Machine Learning & AI",
+      "count": 60
     },
     {
-      "name": "Genetics",
-      "count": 15
+      "name": "Computational & Theoretical",
+      "count": 41
     },
     {
-      "name": "Cell Biology",
-      "count": 14
+      "name": "Motor & Action",
+      "count": 36
     },
     {
-      "name": "Computer Vision and Pattern Recognition",
-      "count": 14
+      "name": "Methods, Stats & Imaging",
+      "count": 34
     },
     {
-      "name": "Developmental Biology",
-      "count": 13
+      "name": "Clinical & Disease",
+      "count": 28
     },
     {
-      "name": "Biophysics",
-      "count": 11
+      "name": "Biophysics & Physics",
+      "count": 25
     },
     {
-      "name": "Ecology, Evolution, Behavior and Systematics",
-      "count": 11
-    },
-    {
-      "name": "Sensory Systems",
-      "count": 10
-    },
-    {
-      "name": "Biomedical Engineering",
-      "count": 9
-    },
-    {
-      "name": "Radiology, Nuclear Medicine and Imaging",
-      "count": 8
-    },
-    {
-      "name": "Nuclear and High Energy Physics",
-      "count": 7
-    },
-    {
-      "name": "Physiology",
-      "count": 6
-    },
-    {
-      "name": "Electrical and Electronic Engineering",
+      "name": "Systems & Circuits",
       "count": 5
-    },
-    {
-      "name": "Epidemiology",
-      "count": 5
-    },
-    {
-      "name": "Signal Processing",
-      "count": 5
-    },
-    {
-      "name": "Social Psychology",
-      "count": 5
-    },
-    {
-      "name": "Atomic and Molecular Physics, and Optics",
-      "count": 4
-    },
-    {
-      "name": "Computer Networks and Communications",
-      "count": 4
-    },
-    {
-      "name": "Developmental and Educational Psychology",
-      "count": 4
-    },
-    {
-      "name": "Endocrine and Autonomic Systems",
-      "count": 4
-    },
-    {
-      "name": "Geometry and Topology",
-      "count": 4
-    },
-    {
-      "name": "Nature and Landscape Conservation",
-      "count": 4
-    },
-    {
-      "name": "Public Health, Environmental and Occupational Health",
-      "count": 4
-    },
-    {
-      "name": "Aerospace Engineering",
-      "count": 3
-    },
-    {
-      "name": "Aging",
-      "count": 3
-    },
-    {
-      "name": "Astronomy and Astrophysics",
-      "count": 3
-    },
-    {
-      "name": "Cancer Research",
-      "count": 3
-    },
-    {
-      "name": "Cardiology and Cardiovascular Medicine",
-      "count": 3
-    },
-    {
-      "name": "Computational Mechanics",
-      "count": 3
-    },
-    {
-      "name": "Developmental Neuroscience",
-      "count": 3
-    },
-    {
-      "name": "Ecology",
-      "count": 3
-    },
-    {
-      "name": "Education",
-      "count": 3
-    },
-    {
-      "name": "Immunology",
-      "count": 3
-    },
-    {
-      "name": "Information Systems",
-      "count": 3
-    },
-    {
-      "name": "Mathematical Physics",
-      "count": 3
-    },
-    {
-      "name": "Psychiatry and Mental health",
-      "count": 3
-    },
-    {
-      "name": "Pulmonary and Respiratory Medicine",
-      "count": 3
-    },
-    {
-      "name": "Statistical and Nonlinear Physics",
-      "count": 3
-    },
-    {
-      "name": "Surgery",
-      "count": 3
-    },
-    {
-      "name": "Clinical Psychology",
-      "count": 2
-    },
-    {
-      "name": "Condensed Matter Physics",
-      "count": 2
-    },
-    {
-      "name": "Control and Systems Engineering",
-      "count": 2
-    },
-    {
-      "name": "Global and Planetary Change",
-      "count": 2
-    },
-    {
-      "name": "Hematology",
-      "count": 2
-    },
-    {
-      "name": "Instrumentation",
-      "count": 2
-    },
-    {
-      "name": "Management Science and Operations Research",
-      "count": 2
-    },
-    {
-      "name": "Modeling and Simulation",
-      "count": 2
-    },
-    {
-      "name": "Pharmacology",
-      "count": 2
-    },
-    {
-      "name": "Small Animals",
-      "count": 2
-    },
-    {
-      "name": "Transportation",
-      "count": 2
-    },
-    {
-      "name": "Water Science and Technology",
-      "count": 2
-    },
-    {
-      "name": "Automotive Engineering",
-      "count": 1
-    },
-    {
-      "name": "Biochemistry",
-      "count": 1
-    },
-    {
-      "name": "Biological Psychiatry",
-      "count": 1
-    },
-    {
-      "name": "Civil and Structural Engineering",
-      "count": 1
-    },
-    {
-      "name": "Computational Theory and Mathematics",
-      "count": 1
-    },
-    {
-      "name": "Computer Science Applications",
-      "count": 1
-    },
-    {
-      "name": "Dermatology",
-      "count": 1
-    },
-    {
-      "name": "Economics and Econometrics",
-      "count": 1
-    },
-    {
-      "name": "Experimental and Cognitive Psychology",
-      "count": 1
-    },
-    {
-      "name": "General Agricultural and Biological Sciences",
-      "count": 1
-    },
-    {
-      "name": "General Health Professions",
-      "count": 1
-    },
-    {
-      "name": "General Psychology",
-      "count": 1
-    },
-    {
-      "name": "Geophysics",
-      "count": 1
-    },
-    {
-      "name": "Hardware and Architecture",
-      "count": 1
-    },
-    {
-      "name": "Health",
-      "count": 1
-    },
-    {
-      "name": "Health Informatics",
-      "count": 1
-    },
-    {
-      "name": "Health Information Management",
-      "count": 1
-    },
-    {
-      "name": "History",
-      "count": 1
-    },
-    {
-      "name": "Inorganic Chemistry",
-      "count": 1
-    },
-    {
-      "name": "Insect Science",
-      "count": 1
-    },
-    {
-      "name": "Literature and Literary Theory",
-      "count": 1
-    },
-    {
-      "name": "Management, Monitoring, Policy and Law",
-      "count": 1
-    },
-    {
-      "name": "Materials Chemistry",
-      "count": 1
-    },
-    {
-      "name": "Mechanical Engineering",
-      "count": 1
-    },
-    {
-      "name": "Mechanics of Materials",
-      "count": 1
-    },
-    {
-      "name": "Nutrition and Dietetics",
-      "count": 1
-    },
-    {
-      "name": "Occupational Therapy",
-      "count": 1
-    },
-    {
-      "name": "Oceanography",
-      "count": 1
-    },
-    {
-      "name": "Oncology",
-      "count": 1
-    },
-    {
-      "name": "Oral Surgery",
-      "count": 1
-    },
-    {
-      "name": "Orthopedics and Sports Medicine",
-      "count": 1
-    },
-    {
-      "name": "Paleontology",
-      "count": 1
-    },
-    {
-      "name": "Pathology and Forensic Medicine",
-      "count": 1
-    },
-    {
-      "name": "Pediatrics, Perinatology and Child Health",
-      "count": 1
-    },
-    {
-      "name": "Pharmaceutical Science",
-      "count": 1
-    },
-    {
-      "name": "Physical Therapy, Sports Therapy and Rehabilitation",
-      "count": 1
-    },
-    {
-      "name": "Political Science and International Relations",
-      "count": 1
-    },
-    {
-      "name": "Polymers and Plastics",
-      "count": 1
-    },
-    {
-      "name": "Radiation",
-      "count": 1
-    },
-    {
-      "name": "Rehabilitation",
-      "count": 1
-    },
-    {
-      "name": "Reproductive Medicine",
-      "count": 1
-    },
-    {
-      "name": "Research and Theory",
-      "count": 1
-    },
-    {
-      "name": "Rheumatology",
-      "count": 1
-    },
-    {
-      "name": "Sociology and Political Science",
-      "count": 1
-    },
-    {
-      "name": "Soil Science",
-      "count": 1
-    },
-    {
-      "name": "Statistics and Probability",
-      "count": 1
-    },
-    {
-      "name": "Statistics, Probability and Uncertainty",
-      "count": 1
-    },
-    {
-      "name": "Urology",
-      "count": 1
     }
   ],
   "byPerson": {
     "A David Redish": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -429,7 +62,8 @@ const MCN_DOMAINS = {
       ]
     },
     "A. David Redish": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -437,7 +71,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Abdoul Kane": {
-      "domain": "Cardiology and Cardiovascular Medicine",
+      "domain": "Other",
+      "subfield": "Cardiology and Cardiovascular Medicine",
       "topics": [
         "Blood Pressure and Hypertension Studies",
         "Cardiac Arrhythmias and Treatments",
@@ -445,7 +80,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Abhinav Grama": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Photoreceptor and optogenetics research",
@@ -453,7 +89,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adam Charles": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Sparse and Compressive Sensing Techniques",
@@ -461,7 +98,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adam Jacobs": {
-      "domain": "Pharmacology",
+      "domain": "Clinical & Disease",
+      "subfield": "Pharmacology",
       "topics": [
         "Pharmaceutical industry and healthcare",
         "Reproductive Health and Contraception",
@@ -469,7 +107,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adam Kepecs": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -477,7 +116,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adelle Coster": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Metabolism, Diabetes, and Cancer",
         "Pancreatic function and diabetes",
@@ -485,7 +125,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adrien Jouary": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Neural dynamics and brain function",
@@ -493,7 +134,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adrienne Fairhall": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -501,7 +143,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Adrienne L. Fairhall": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -509,7 +152,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Aeyal Raz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurological disorders and treatments",
@@ -517,7 +161,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Agostina Palmigiano": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Photoreceptor and optogenetics research",
@@ -525,7 +170,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ahmed El Hady": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Behavior and Reproduction",
@@ -533,7 +179,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ahmed Faisal": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Face and Expression Recognition",
         "Image Retrieval and Classification Techniques",
@@ -541,7 +188,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Akaysha Tang": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neural dynamics and brain function",
@@ -549,7 +197,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Akira Date": {
-      "domain": "Dermatology",
+      "domain": "Other",
+      "subfield": "Dermatology",
       "topics": [
         "Skin Protection and Aging",
         "Neural Networks and Applications",
@@ -557,7 +206,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alain Destexhe": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -565,7 +215,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alan Dorval": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Neurological disorders and treatments",
         "Neuroscience and Neural Engineering",
@@ -573,7 +224,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alan Gelperin": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Olfactory and Sensory Function Studies",
@@ -581,7 +233,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alan Peters": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -589,7 +242,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alberto Herrera-Becerra": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Animal Behavior and Reproduction",
         "Neural Networks and Applications",
@@ -597,7 +251,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Aleena Garner": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Photoreceptor and optogenetics research",
@@ -605,7 +260,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alessandro Barri": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -613,7 +269,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alex H. Williams": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -621,7 +278,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alex Kwan": {
-      "domain": "Clinical Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Clinical Psychology",
       "topics": [
         "Psychedelics and Drug Studies",
         "Neurotransmitter Receptor Influence on Behavior",
@@ -629,7 +287,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alex Loebel": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -637,7 +296,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alex Piet": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Receptor Mechanisms and Signaling",
@@ -645,7 +305,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alex Reyes": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -653,7 +314,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alex Williams": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -661,7 +323,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexander Chubykin": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -669,7 +332,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexander Katsov": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -677,7 +341,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexander Kirillov": {
-      "domain": "Geometry and Topology",
+      "domain": "Other",
+      "subfield": "Geometry and Topology",
       "topics": [
         "Algebraic structures and combinatorial models",
         "Parasite Biology and Host Interactions",
@@ -685,7 +350,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexander Pentland": {
-      "domain": "Transportation",
+      "domain": "Other",
+      "subfield": "Transportation",
       "topics": [
         "Human Mobility and Location-Based Analysis",
         "Complex Network Analysis Techniques",
@@ -693,7 +359,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexander Sood": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Particle physics theoretical and experimental studies",
         "High-Energy Particle Collisions Research",
@@ -701,7 +368,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexandra Batchelor": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect and Arachnid Ecology and Behavior",
@@ -709,7 +377,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexay Kozhevnikov": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -717,7 +386,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alexis Hattox": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -725,7 +395,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alison Duffy": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -733,7 +404,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alison Weber": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurobiology and Insect Physiology Research",
@@ -741,7 +413,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alix Lacoste": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Parkinson's Disease Mechanisms and Treatments",
         "Bioinformatics and Genomic Networks",
@@ -749,7 +422,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alla Borisyuk": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -757,7 +431,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alla Karpova": {
-      "domain": "Cancer Research",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cancer Research",
       "topics": [
         "Cancer Genomics and Diagnostics",
         "Single-cell and spatial transcriptomics",
@@ -765,7 +440,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Allan Coop": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Scientific Computing and Data Management",
@@ -773,7 +449,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Allen Dobbins": {
-      "domain": "Developmental and Educational Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Developmental and Educational Psychology",
       "topics": [
         "Educational Games and Gamification",
         "Literacy, Media, and Education",
@@ -781,7 +458,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Allen Selverston": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -789,7 +467,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Allison Balogh": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Visual perception and processing mechanisms",
@@ -797,7 +476,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Allison Doupe": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -805,7 +485,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Alon Rubin": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Memory and Neural Mechanisms",
@@ -813,7 +494,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Amanda Foust": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Neural dynamics and brain function",
@@ -821,7 +503,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Amina Kinkhabwala": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Sleep and Wakefulness Research",
@@ -829,7 +512,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Amir Assadi": {
-      "domain": "Mathematical Physics",
+      "domain": "Other",
+      "subfield": "Mathematical Physics",
       "topics": [
         "Homotopy and Cohomology in Algebraic Topology",
         "Neural Networks and Applications",
@@ -837,7 +521,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Amir Globerson": {
-      "domain": "Artificial Intelligence",
+      "domain": "Other",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Topic Modeling",
         "Natural Language Processing Techniques",
@@ -845,7 +530,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ana Katrin Schenk": {
-      "domain": "Astronomy and Astrophysics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Astronomy and Astrophysics",
       "topics": [
         "Pulsars and Gravitational Waves Research",
         "Effects and risks of endocrine disrupting chemicals",
@@ -853,7 +539,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anat Arzi": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Sleep and Wakefulness Research",
@@ -861,7 +548,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrea Barreiro": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -869,7 +557,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrea Hasenstaub": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -877,7 +566,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andreas Herz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -885,7 +575,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andreas Liu": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -893,7 +584,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrei Khilkevich": {
-      "domain": "Neurology",
+      "domain": "Sensory & Perception",
+      "subfield": "Neurology",
       "topics": [
         "Vestibular and auditory disorders",
         "Neural dynamics and brain function",
@@ -901,7 +593,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrew Fink": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Olfactory and Sensory Function Studies",
@@ -909,7 +602,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrew Hill": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Single-cell and spatial transcriptomics",
         "Genomics and Chromatin Dynamics",
@@ -917,7 +611,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrew Oster": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -925,7 +620,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrew Schwartz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neuroscience and Neural Engineering",
@@ -933,7 +629,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Andrew Spence": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Robotic Locomotion and Control",
         "Mast cells and histamine",
@@ -941,7 +638,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Angela Bruno": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurobiology and Insect Physiology Research",
@@ -949,7 +647,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anita Rado": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Olfactory and Sensory Function Studies",
@@ -957,7 +656,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anitha Pasupathy": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -965,7 +665,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anja Gundlfinger": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -973,7 +674,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anke Borgmann": {
-      "domain": "Endocrine and Autonomic Systems",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Endocrine and Autonomic Systems",
       "topics": [
         "Neuroscience of respiration and sleep",
         "Neural dynamics and brain function",
@@ -981,7 +683,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anke Post": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Parkinson's Disease Mechanisms and Treatments",
         "Transcranial Magnetic Stimulation Studies",
@@ -989,7 +692,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ann Clemens": {
-      "domain": "Social Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Social Psychology",
       "topics": [
         "Neuroendocrine regulation and behavior",
         "Neuroscience and Neuropharmacology Research",
@@ -997,7 +701,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ann Kennedy": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroendocrine regulation and behavior",
@@ -1005,7 +710,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ann Lee": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Natural Language Processing Techniques",
         "Speech Recognition and Synthesis",
@@ -1013,7 +719,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anna Majewska": {
-      "domain": "Neurology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Neurology",
       "topics": [
         "Neuroinflammation and Neurodegeneration Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -1021,7 +728,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anne Marie Oswald": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -1029,7 +737,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anthony Zador": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Cell Image Analysis Techniques",
@@ -1037,7 +746,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anton Khabbaz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -1045,7 +755,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anton Krukowski": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -1053,7 +764,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Anton Sirota": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1061,7 +773,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Antonia Drinnenberg": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -1069,7 +782,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Apostolos Georgopoulos": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -1077,7 +791,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Areti Tzelepi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Visual perception and processing mechanisms",
@@ -1085,7 +800,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Aric Agmon": {
-      "domain": "Public Health, Environmental and Occupational Health",
+      "domain": "Other",
+      "subfield": "Public Health, Environmental and Occupational Health",
       "topics": [
         "Innovations in Medical Education",
         "Radiology practices and education",
@@ -1093,7 +809,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ariel Bowman": {
-      "domain": "Epidemiology",
+      "domain": "Clinical & Disease",
+      "subfield": "Epidemiology",
       "topics": [
         "Acute Ischemic Stroke Management",
         "Stroke Rehabilitation and Recovery",
@@ -1101,7 +818,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Armen Stepanyants": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1109,7 +827,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Arpiar Saunders": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Single-cell and spatial transcriptomics",
@@ -1117,7 +836,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Arseny Finkelstein": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1125,7 +845,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Arthur Sherman": {
-      "domain": "Surgery",
+      "domain": "Other",
+      "subfield": "Surgery",
       "topics": [
         "Pancreatic function and diabetes",
         "Diabetes Management and Research",
@@ -1133,7 +854,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Artur Escalada": {
-      "domain": "Molecular Biology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Molecular Biology",
       "topics": [
         "Lipid Membrane Structure and Behavior",
         "Ion channel regulation and function",
@@ -1141,7 +863,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ashlan Reid": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1149,7 +872,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ashok Kumar": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Particle physics theoretical and experimental studies",
         "High-Energy Particle Collisions Research",
@@ -1157,7 +881,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Audrey Guzik": {
-      "domain": "Ecology",
+      "domain": "Other",
+      "subfield": "Ecology",
       "topics": [
         "Marine animal studies overview",
         "Underwater Vehicles and Communication Systems",
@@ -1165,7 +890,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Audrey Sederberg": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -1173,7 +899,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Aurora Isaac": {
-      "domain": "Molecular Biology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Molecular Biology",
       "topics": [
         "Lipid Membrane Structure and Behavior",
         "Neural dynamics and brain function",
@@ -1181,7 +908,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Avis H Cohen": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Robotic Locomotion and Control",
@@ -1189,7 +917,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Aviva Weisel Eichler": {
-      "domain": "Rehabilitation",
+      "domain": "Clinical & Disease",
+      "subfield": "Rehabilitation",
       "topics": [
         "Stroke Rehabilitation and Recovery",
         "Neurobiology and Insect Physiology Research",
@@ -1197,7 +926,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Aylin Cimenser": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -1205,7 +935,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ayse Yarali": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect and Arachnid Ecology and Behavior",
@@ -1213,7 +944,8 @@ const MCN_DOMAINS = {
       ]
     },
     "B Suresh Krishna": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -1221,7 +953,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Barak Blumenfeld": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1229,7 +962,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Barbara Moore": {
-      "domain": "Physiology",
+      "domain": "Other",
+      "subfield": "Physiology",
       "topics": [
         "Adipose Tissue and Metabolism",
         "Diet and metabolism studies",
@@ -1237,7 +971,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bard Ermentrout": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -1245,7 +980,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Barry Connors": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1253,7 +989,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Barry Wark": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -1261,7 +998,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bartlett Mel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1269,7 +1007,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bartlett W. Mel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1277,7 +1016,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Belen Lafon": {
-      "domain": "Neurology",
+      "domain": "Other",
+      "subfield": "Neurology",
       "topics": [
         "Transcranial Magnetic Stimulation Studies",
         "Neuroscience and Neural Engineering",
@@ -1285,7 +1025,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bence Olveczky": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Vocal Communication and Behavior",
@@ -1293,7 +1034,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Benjamin Kraus": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -1301,7 +1043,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Beth Lopour": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neural dynamics and brain function",
@@ -1309,7 +1052,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Biswa Sengupta": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1317,7 +1061,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Boris Gutkin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1325,7 +1070,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Boris Shraiman": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Cellular Mechanics and Interactions",
         "Evolution and Genetic Dynamics",
@@ -1333,7 +1079,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Braden Brinkman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1341,7 +1088,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bradford Bratton": {
-      "domain": "Cardiology and Cardiovascular Medicine",
+      "domain": "Other",
+      "subfield": "Cardiology and Cardiovascular Medicine",
       "topics": [
         "Heart Rate Variability and Autonomic Control",
         "Neuroscience of respiration and sleep",
@@ -1349,7 +1097,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Brandt Kehoe": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Particle physics theoretical and experimental studies",
         "Quantum Chromodynamics and Particle Interactions",
@@ -1357,7 +1106,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Brent Doiron": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -1365,7 +1115,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Brian Colder": {
-      "domain": "Psychiatry and Mental health",
+      "domain": "Clinical & Disease",
+      "subfield": "Psychiatry and Mental health",
       "topics": [
         "Epilepsy research and treatment",
         "Neural dynamics and brain function",
@@ -1373,7 +1124,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Brian Lundstrom": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Neurological disorders and treatments",
         "EEG and Brain-Computer Interfaces",
@@ -1381,7 +1133,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Brian Smith": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Plant and animal studies",
         "Insect and Arachnid Ecology and Behavior",
@@ -1389,7 +1142,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Brian Wright": {
-      "domain": "Education",
+      "domain": "Cellular & Molecular",
+      "subfield": "Education",
       "topics": [
         "Early Childhood Education and Development",
         "Parental Involvement in Education",
@@ -1397,7 +1151,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Britt Anderson": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural and Behavioral Psychology Studies",
@@ -1405,7 +1160,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Broek Jantine": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetics and Neurodevelopmental Disorders",
         "Neuroscience and Neuropharmacology Research",
@@ -1413,7 +1169,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bruce Bean": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Neuroscience and Neuropharmacology Research",
@@ -1421,7 +1178,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bruce Mcnaughton": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -1429,7 +1187,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Bryan Toth": {
-      "domain": "Aerospace Engineering",
+      "domain": "Biophysics & Physics",
+      "subfield": "Aerospace Engineering",
       "topics": [
         "Nuclear reactor physics and engineering",
         "Nuclear Physics and Applications",
@@ -1437,7 +1196,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Carlo Laing": {
-      "domain": "Computer Networks and Communications",
+      "domain": "Computational & Theoretical",
+      "subfield": "Computer Networks and Communications",
       "topics": [
         "Nonlinear Dynamics and Pattern Formation",
         "Neural dynamics and brain function",
@@ -1445,7 +1205,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Carlos Brody": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -1453,7 +1214,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Carmen Canavier": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1461,7 +1223,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Carol Colby": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -1469,7 +1232,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Carson Chow": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1477,7 +1241,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Catherine Eisenhauer": {
-      "domain": "Modeling and Simulation",
+      "domain": "Other",
+      "subfield": "Modeling and Simulation",
       "topics": [
         "COVID-19 epidemiological studies",
         "Plant tissue culture and regeneration",
@@ -1485,7 +1250,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Catherine Wacongne": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -1493,7 +1259,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Cengiz Pehlevan": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -1501,7 +1268,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chandan Dasgupta": {
-      "domain": "Condensed Matter Physics",
+      "domain": "Computational & Theoretical",
+      "subfield": "Condensed Matter Physics",
       "topics": [
         "Theoretical and Computational Physics",
         "Material Dynamics and Properties",
@@ -1509,7 +1277,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Charles F Stevens": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1517,7 +1286,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Charles Gray": {
-      "domain": "Global and Planetary Change",
+      "domain": "Other",
+      "subfield": "Global and Planetary Change",
       "topics": [
         "Marine and fisheries research",
         "Fish Ecology and Management Studies",
@@ -1525,7 +1295,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Charles Wilson": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -1533,7 +1304,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Charlotte Grove": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1541,7 +1313,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Cheng Chang Lien": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Video Surveillance and Tracking Methods",
         "Advanced Image and Video Retrieval Techniques",
@@ -1549,7 +1322,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Cheng Yu Li": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -1557,7 +1331,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chethan Pandarinath": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neural dynamics and brain function",
@@ -1565,7 +1340,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chi Hon Lee": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Retinal Development and Disorders",
@@ -1573,7 +1349,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ching Ling Teng": {
-      "domain": "Radiation",
+      "domain": "Biophysics & Physics",
+      "subfield": "Radiation",
       "topics": [
         "Advanced Radiotherapy Techniques",
         "Radiation Therapy and Dosimetry",
@@ -1581,7 +1358,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ching Lung Hsu": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1589,7 +1367,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chris Deister": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1597,7 +1376,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chris Eliasmith": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -1605,7 +1385,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chris Passaglia": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -1613,7 +1394,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christian Machens": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1621,7 +1403,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christian Petereit": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Visual perception and processing mechanisms",
@@ -1629,7 +1412,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christiane Linster": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Neurobiology and Insect Physiology Research",
@@ -1637,7 +1421,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christina Buetfering": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1645,7 +1430,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christina Weaver": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1653,7 +1439,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christine Lee": {
-      "domain": "Epidemiology",
+      "domain": "Other",
+      "subfield": "Epidemiology",
       "topics": [
         "Substance Abuse Treatment and Outcomes",
         "Cannabis and Cannabinoid Research",
@@ -1661,7 +1448,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christof Koch": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1669,7 +1457,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christophe Dupre": {
-      "domain": "Paleontology",
+      "domain": "Other",
+      "subfield": "Paleontology",
       "topics": [
         "Marine Invertebrate Physiology and Ecology",
         "Advanced Fluorescence Microscopy Techniques",
@@ -1677,7 +1466,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christopher Decharms": {
-      "domain": "Physiology",
+      "domain": "Sensory & Perception",
+      "subfield": "Physiology",
       "topics": [
         "Pain Mechanisms and Treatments",
         "Musculoskeletal pain and rehabilitation",
@@ -1685,7 +1475,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christopher Dimattina": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -1693,7 +1484,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christopher Gaiteri": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Bioinformatics and Genomic Networks",
         "Alzheimer's disease research and treatments",
@@ -1701,7 +1493,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Christopher Stock": {
-      "domain": "Electrical and Electronic Engineering",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Electrical and Electronic Engineering",
       "topics": [
         "Advanced Memory and Neural Computing",
         "Neural dynamics and brain function",
@@ -1709,7 +1502,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Chung Yiu Jonathan Tang": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Other",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Monoclonal and Polyclonal Antibodies Research",
         "Glycosylation and Glycoproteins Research",
@@ -1717,7 +1511,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Claire Discenza": {
-      "domain": "Neurology",
+      "domain": "Other",
+      "subfield": "Neurology",
       "topics": [
         "Barrier Structure and Function Studies",
         "Nanoparticle-Based Drug Delivery",
@@ -1725,7 +1520,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Clara Bodelon": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "BRCA gene mutations in cancer",
         "Ovarian cancer diagnosis and treatment",
@@ -1733,7 +1529,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Clay Reid": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1741,7 +1538,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Cong Guo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Neural dynamics and brain function",
@@ -1749,7 +1547,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Conor Dempsey": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Animal Behavior and Reproduction",
         "Neurobiology and Insect Physiology Research",
@@ -1757,7 +1556,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Corette Wierenga": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1765,7 +1565,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Corey Acker": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -1773,7 +1574,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Cristina Savin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -1781,7 +1583,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Curtis Bell": {
-      "domain": "Nature and Landscape Conservation",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Nature and Landscape Conservation",
       "topics": [
         "Fish biology, ecology, and behavior",
         "Ichthyology and Marine Biology",
@@ -1789,7 +1592,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daisuke Takeshita": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Muscle activation and electromyography studies",
         "Neural dynamics and brain function",
@@ -1797,7 +1601,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dajun Xing": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1805,7 +1610,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dale Anders": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Genetic Associations and Epidemiology",
@@ -1813,7 +1619,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dan Johnston": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1821,7 +1628,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dana Cohen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -1829,7 +1637,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dani Dumitriu": {
-      "domain": "Public Health, Environmental and Occupational Health",
+      "domain": "Other",
+      "subfield": "Public Health, Environmental and Occupational Health",
       "topics": [
         "Maternal Mental Health During Pregnancy and Postpartum",
         "COVID-19 Impact on Reproduction",
@@ -1837,7 +1646,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Butts": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1845,7 +1655,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Hill": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Particle physics theoretical and experimental studies",
         "High-Energy Particle Collisions Research",
@@ -1853,7 +1664,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Johnston": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -1861,7 +1673,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Kimmel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -1869,7 +1682,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel L Alkon": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neurobiology and Insect Physiology Research",
@@ -1877,7 +1691,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Lee": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Robotic Path Planning Algorithms",
@@ -1885,7 +1700,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel O'Connor": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -1893,7 +1709,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Reich": {
-      "domain": "Artificial Intelligence",
+      "domain": "Biophysics & Physics",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Quantum Information and Cryptography",
         "Quantum Computing Algorithms and Architecture",
@@ -1901,7 +1718,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Rojas": {
-      "domain": "Small Animals",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Small Animals",
       "topics": [
         "Animal Behavior and Welfare Studies",
         "Effects of Environmental Stressors on Livestock",
@@ -1909,7 +1727,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Soudry": {
-      "domain": "Artificial Intelligence",
+      "domain": "Computational & Theoretical",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Stochastic Gradient Optimization Techniques",
         "Advanced Neural Network Applications",
@@ -1917,7 +1736,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Strouse": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Reinforcement Learning in Robotics",
@@ -1925,7 +1745,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daniel Wolpert": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Action Observation and Synchronization",
@@ -1933,7 +1754,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Darcy Kelley": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -1941,7 +1763,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Daryl R Kipke": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neural Engineering",
         "EEG and Brain-Computer Interfaces",
@@ -1949,7 +1772,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Beeman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -1957,7 +1781,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Berkowicz": {
-      "domain": "Health Information Management",
+      "domain": "Other",
+      "subfield": "Health Information Management",
       "topics": [
         "Electronic Health Records Systems",
         "Biomedical Text Mining and Ontologies",
@@ -1965,7 +1790,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Berkowitz": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Chemical Synthesis and Analysis",
         "Fluorine in Organic Chemistry",
@@ -1973,7 +1799,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Ferster": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -1981,7 +1808,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Golomb": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1989,7 +1817,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Hansel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -1997,7 +1826,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Kastner": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -2005,7 +1835,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Kleinfeld": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Fluorescence Microscopy Techniques",
@@ -2013,7 +1844,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Lewis": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -2021,7 +1853,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Mackay": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Error Correcting Code Techniques",
@@ -2029,7 +1862,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Mccormick": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -2037,7 +1871,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Naylor": {
-      "domain": "Astronomy and Astrophysics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Astronomy and Astrophysics",
       "topics": [
         "Superconducting and THz Device Technology",
         "Atmospheric Ozone and Climate",
@@ -2045,7 +1880,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Pinto": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Genomics and Chromatin Dynamics",
@@ -2053,7 +1889,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Robinson": {
-      "domain": "Soil Science",
+      "domain": "Other",
+      "subfield": "Soil Science",
       "topics": [
         "Soil Carbon and Nitrogen Dynamics",
         "Plant nutrient uptake and metabolism",
@@ -2061,7 +1898,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Rumelhart": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Computability, Logic, AI Algorithms",
@@ -2069,7 +1907,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Somers": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -2077,7 +1916,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Sparks": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Alzheimer's disease research and treatments",
@@ -2085,7 +1925,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Tank": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2093,7 +1934,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Terman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -2101,7 +1943,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Van Essen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Neural dynamics and brain function",
@@ -2109,7 +1952,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Zeddies": {
-      "domain": "Ecology",
+      "domain": "Other",
+      "subfield": "Ecology",
       "topics": [
         "Marine animal studies overview",
         "Underwater Acoustics Research",
@@ -2117,7 +1961,8 @@ const MCN_DOMAINS = {
       ]
     },
     "David Zipser": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "RNA and protein synthesis mechanisms",
@@ -2125,7 +1970,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dawn Song": {
-      "domain": "Signal Processing",
+      "domain": "Other",
+      "subfield": "Signal Processing",
       "topics": [
         "Advanced Malware Detection Techniques",
         "Adversarial Robustness in Machine Learning",
@@ -2133,7 +1979,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dawn Taylor": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neuroscience and Neural Engineering",
@@ -2141,7 +1988,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dean Buonomano": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -2149,7 +1997,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Denis Baylor": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -2157,7 +2006,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dennis Bray": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetic and phenotypic traits in livestock",
         "Animal Nutrition and Physiology",
@@ -2165,7 +2015,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dezhe Jin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Vocal Communication and Behavior",
@@ -2173,7 +2024,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Diana Burk": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Neural dynamics and brain function",
@@ -2181,7 +2033,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Diana Smetters": {
-      "domain": "Information Systems",
+      "domain": "Other",
+      "subfield": "Information Systems",
       "topics": [
         "User Authentication and Security Systems",
         "Neural dynamics and brain function",
@@ -2189,7 +2042,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Didier Depireux": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -2197,7 +2051,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dieter Jaeger": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2205,7 +2060,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dietmar Rapf": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -2213,7 +2069,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dimitri Fisher": {
-      "domain": "Mechanics of Materials",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Mechanics of Materials",
       "topics": [
         "Laser-induced spectroscopy and plasma",
         "Atomic and Molecular Physics",
@@ -2221,7 +2078,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dirk Kautz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2229,7 +2087,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dmitri Mitya Chklovskii": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2237,7 +2096,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dmitry Rinberg": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Neurobiology and Insect Physiology Research",
@@ -2245,7 +2105,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Donald Weir": {
-      "domain": "Aerospace Engineering",
+      "domain": "Other",
+      "subfield": "Aerospace Engineering",
       "topics": [
         "Aerodynamics and Acoustics in Jet Flows",
         "Acoustic Wave Phenomena Research",
@@ -2253,7 +2114,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dongsung Huh": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Graph Neural Networks",
@@ -2261,7 +2123,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dorea Vierling-Claassen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2269,7 +2132,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Douglas Morton": {
-      "domain": "Global and Planetary Change",
+      "domain": "Other",
+      "subfield": "Global and Planetary Change",
       "topics": [
         "Fire effects on ecosystems",
         "Remote Sensing in Agriculture",
@@ -2277,7 +2141,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Duane Nykamp": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -2285,7 +2150,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Dyuti Bhattacharya": {
-      "domain": "Statistical and Nonlinear Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Statistical and Nonlinear Physics",
       "topics": [
         "Advanced Thermodynamics and Statistical Mechanics",
         "Material Dynamics and Properties",
@@ -2293,7 +2159,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Edmund Rolls": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -2301,7 +2168,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Edward Adelson": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Sensory & Perception",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Advanced Vision and Imaging",
         "Tactile and Sensory Interactions",
@@ -2309,7 +2177,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Edward Bartlett": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Hearing Loss and Rehabilitation",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -2317,7 +2186,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Edward Kairiss": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -2325,7 +2195,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Edward Zagha": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2333,7 +2204,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eero Simoncelli": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2341,7 +2213,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Efrat Barak Shimron": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -2349,7 +2222,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ehud Ahissar": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2357,7 +2231,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Elad Ganmor": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2365,7 +2240,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Elad Schneidman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2373,7 +2249,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Elaine Corbett": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Endoplasmic Reticulum Stress and Disease",
         "Galectins and Cancer Biology",
@@ -2381,7 +2258,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Elena Phoka": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2389,7 +2267,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ellen Barton": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetic and phenotypic traits in livestock",
         "Ruminant Nutrition and Digestive Physiology",
@@ -2397,7 +2276,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emami Melikasadat": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Analog and Mixed-Signal Circuit Design",
@@ -2405,7 +2285,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emanuel Todorov": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Robot Manipulation and Learning",
@@ -2413,7 +2294,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emery Brown": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -2421,7 +2303,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emery N. Brown": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -2429,7 +2312,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emil Hewage": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Vagus Nerve Stimulation Research",
@@ -2437,7 +2321,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emilio Bizzi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Muscle activation and electromyography studies",
@@ -2445,7 +2330,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emilio Salinas": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2453,13 +2339,15 @@ const MCN_DOMAINS = {
       ]
     },
     "Emily Caporello": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function"
       ]
     },
     "Emily Mackevicius": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -2467,7 +2355,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emily Mackevicius Mackevicius": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -2475,7 +2364,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emily Meyer": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetics and Neurodevelopmental Disorders",
         "Genetic Syndromes and Imprinting",
@@ -2483,7 +2373,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emma Karlin": {
-      "domain": "General Health Professions",
+      "domain": "Other",
+      "subfield": "General Health Professions",
       "topics": [
         "Mobile Health and mHealth Applications",
         "Digital Mental Health Interventions",
@@ -2491,7 +2382,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Emre Aksay": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -2499,7 +2391,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eran Mukamel": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Single-cell and spatial transcriptomics",
         "Epigenetics and DNA Methylation",
@@ -2507,7 +2400,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eric Larson": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Protein Structure and Dynamics",
         "Machine Learning in Materials Science",
@@ -2515,7 +2409,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eric Reifenstein": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -2523,7 +2418,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eric Schwartz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2531,7 +2427,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eric Shea-Brown": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -2539,7 +2436,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Erik Cook": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2547,7 +2445,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Erik De Schutter": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2555,7 +2454,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Erin Munro": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2563,7 +2463,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ernest Barreto": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -2571,7 +2472,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Etienne Serbe": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Retinal Development and Disorders",
@@ -2579,7 +2481,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eugene Izhikevich": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -2587,7 +2490,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eugenia Chiappe": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Animal Behavior and Reproduction",
@@ -2595,7 +2499,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eva Naumann": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Neural dynamics and brain function",
@@ -2603,7 +2508,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Evan Archer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2611,7 +2517,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eve Marder": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -2619,7 +2526,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Evelyn Sander": {
-      "domain": "Mathematical Physics",
+      "domain": "Other",
+      "subfield": "Mathematical Physics",
       "topics": [
         "Mathematical Dynamics and Fractals",
         "Quantum chaos and dynamical systems",
@@ -2627,7 +2535,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Evelyn Tang": {
-      "domain": "Atomic and Molecular Physics, and Optics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Atomic and Molecular Physics, and Optics",
       "topics": [
         "Topological Materials and Phenomena",
         "Physics of Superconductivity and Magnetism",
@@ -2635,7 +2544,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Evyatar Av-Ron": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Logic, programming, and type systems",
@@ -2643,7 +2553,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Excel Que": {
-      "domain": "Public Health, Environmental and Occupational Health",
+      "domain": "Other",
+      "subfield": "Public Health, Environmental and Occupational Health",
       "topics": [
         "Nutritional Studies and Diet",
         "Diet and metabolism studies",
@@ -2651,7 +2562,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eyal Bartfeld": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2659,7 +2571,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Eyal Seidemann": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2667,7 +2580,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Fan Gang Zeng": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Hearing Loss and Rehabilitation",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -2675,7 +2589,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Farid Hamzei-Sichani": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Intracranial Aneurysms: Treatment and Complications",
@@ -2683,7 +2598,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Farrell Matthew": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2691,7 +2607,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Fatma Gurel-Kazanci": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -2699,7 +2616,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Felipe Gerhard": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2707,7 +2625,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Felix Creutzig": {
-      "domain": "Transportation",
+      "domain": "Other",
+      "subfield": "Transportation",
       "topics": [
         "Urban Transport and Accessibility",
         "Climate Change Policy and Economics",
@@ -2715,7 +2634,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ferenc Mechler": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2723,7 +2643,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Fernando Fernandez": {
-      "domain": "Signal Processing",
+      "domain": "Other",
+      "subfield": "Signal Processing",
       "topics": [
         "Biometric Identification and Security",
         "Face recognition and analysis",
@@ -2731,7 +2652,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Fleur Zeldenrust": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -2739,7 +2661,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Flora Bouchacourt": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -2747,7 +2670,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Florin Chirila": {
-      "domain": "Physiology",
+      "domain": "Clinical & Disease",
+      "subfield": "Physiology",
       "topics": [
         "Alzheimer's disease research and treatments",
         "Nonlinear Dynamics and Pattern Formation",
@@ -2755,7 +2679,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Francesca Mastrogiuseppe": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -2763,7 +2688,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Francesco Battaglia": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -2771,7 +2697,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Francisco Luongo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurobiology and Insect Physiology Research",
@@ -2779,7 +2706,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Francois David": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -2787,14 +2715,16 @@ const MCN_DOMAINS = {
       ]
     },
     "Franklin Schuling": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Sensory & Perception",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Advanced Vision and Imaging",
         "Image Retrieval and Classification Techniques"
       ]
     },
     "Franz Weber": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Sleep and Wakefulness Research",
         "Circadian rhythm and melatonin",
@@ -2802,7 +2732,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Fred Rieke": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Neural dynamics and brain function",
@@ -2810,7 +2741,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Frederick Sigworth": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Nicotinic Acetylcholine Receptors Study",
@@ -2818,7 +2750,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Fredrik Edin": {
-      "domain": "Cell Biology",
+      "domain": "Motor & Action",
+      "subfield": "Cell Biology",
       "topics": [
         "Muscle metabolism and nutrition",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -2826,7 +2759,8 @@ const MCN_DOMAINS = {
       ]
     },
     "G Bard Ermentrout": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -2834,7 +2768,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gabriel Kreiman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -2842,7 +2777,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gabriel Soto": {
-      "domain": "Biomedical Engineering",
+      "domain": "Biophysics & Physics",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Fluid Dynamics and Mixing",
         "Hydrology and Watershed Management Studies",
@@ -2850,7 +2786,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gabrielle Gutierrez": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurobiology and Insect Physiology Research",
@@ -2858,7 +2795,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gal Chechik": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Machine Learning & AI",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Multimodal Machine Learning Applications",
         "Domain Adaptation and Few-Shot Learning",
@@ -2866,7 +2804,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gal Haspel": {
-      "domain": "Aging",
+      "domain": "Cellular & Molecular",
+      "subfield": "Aging",
       "topics": [
         "Genetics, Aging, and Longevity in Model Organisms",
         "Neurobiology and Insect Physiology Research",
@@ -2874,7 +2813,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Galit Fuhrmann": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2882,7 +2822,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gamaleldin Elsayed": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Adversarial Robustness in Machine Learning",
@@ -2890,7 +2831,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gary Marsat": {
-      "domain": "Nature and Landscape Conservation",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Nature and Landscape Conservation",
       "topics": [
         "Fish biology, ecology, and behavior",
         "Neural dynamics and brain function",
@@ -2898,7 +2840,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gasper Tkacik": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Neural dynamics and brain function",
@@ -2906,7 +2849,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gautam Agarwal": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Memory and Neural Mechanisms",
@@ -2914,7 +2858,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gaute Einevoll": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -2922,7 +2867,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gayle Wittenberg": {
-      "domain": "Biological Psychiatry",
+      "domain": "Clinical & Disease",
+      "subfield": "Biological Psychiatry",
       "topics": [
         "Tryptophan and brain disorders",
         "Stress Responses and Cortisol",
@@ -2930,7 +2876,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gennady Cymbalyuk": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -2938,7 +2885,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Geoffrey Lewen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurobiology and Insect Physiology Research",
@@ -2946,7 +2894,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Georgina Cruz": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Ion Channels and Receptors",
@@ -2954,7 +2903,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gerald Pho": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2962,7 +2912,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Geraldine Wright": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Plant and animal studies",
         "Insect and Pesticide Research",
@@ -2970,7 +2921,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gidon Felsen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurological disorders and treatments",
@@ -2978,7 +2930,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gilad Jacobson": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -2986,7 +2939,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gill Jonathan": {
-      "domain": "Pulmonary and Respiratory Medicine",
+      "domain": "Other",
+      "subfield": "Pulmonary and Respiratory Medicine",
       "topics": [
         "Sarcoma Diagnosis and Treatment",
         "Chromatin Remodeling and Cancer",
@@ -2994,7 +2948,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gilles Laurent": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -3002,7 +2957,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gily Ginosar": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Photoreceptor and optogenetics research",
         "Memory and Neural Mechanisms",
@@ -3010,7 +2966,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gina Escobar": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3018,7 +2975,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Giulia Spampinato": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Neuroscience and Neural Engineering",
@@ -3026,7 +2984,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gonzalo Garcia De Polavieja": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurobiology and Insect Physiology Research",
@@ -3034,7 +2993,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Graham Smith": {
-      "domain": "Inorganic Chemistry",
+      "domain": "Other",
+      "subfield": "Inorganic Chemistry",
       "topics": [
         "Crystal structures of chemical compounds",
         "Wildlife Ecology and Conservation",
@@ -3042,7 +3002,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Greg Corrado": {
-      "domain": "Health Informatics",
+      "domain": "Machine Learning & AI",
+      "subfield": "Health Informatics",
       "topics": [
         "Artificial Intelligence in Healthcare and Education",
         "AI in cancer detection",
@@ -3050,7 +3011,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Greg Stephens": {
-      "domain": "Aging",
+      "domain": "Cellular & Molecular",
+      "subfield": "Aging",
       "topics": [
         "Genetics, Aging, and Longevity in Model Organisms",
         "Neural dynamics and brain function",
@@ -3058,7 +3020,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gregory Gage": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neural Engineering",
         "Neural dynamics and brain function",
@@ -3066,7 +3029,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gregory J. Gage": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neural Engineering",
         "Neural dynamics and brain function",
@@ -3074,7 +3038,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gregory Smith": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Cardiac electrophysiology and arrhythmias",
@@ -3082,7 +3047,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gregory Wayne": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Reinforcement Learning in Robotics",
         "Domain Adaptation and Few-Shot Learning",
@@ -3090,7 +3056,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gribkova Ekaterina": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Cephalopods and Marine Biology",
         "Neural dynamics and brain function",
@@ -3098,7 +3065,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guifen Chen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -3106,7 +3074,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guillaume Lajoie": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -3114,7 +3083,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guo Chong": {
-      "domain": "Automotive Engineering",
+      "domain": "Other",
+      "subfield": "Automotive Engineering",
       "topics": [
         "Electric and Hybrid Vehicle Technologies",
         "Electric Vehicles and Infrastructure",
@@ -3122,7 +3092,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guo Qiang Bi": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -3130,7 +3101,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guoqiang Bi": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -3138,7 +3110,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gustavo Patino": {
-      "domain": "Public Health, Environmental and Occupational Health",
+      "domain": "Other",
+      "subfield": "Public Health, Environmental and Occupational Health",
       "topics": [
         "Innovations in Medical Education",
         "Ion channel regulation and function",
@@ -3146,7 +3119,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guy Major": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3154,7 +3128,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Guy Mayraz": {
-      "domain": "Social Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Social Psychology",
       "topics": [
         "Psychological Well-being and Life Satisfaction",
         "Income, Poverty, and Inequality",
@@ -3162,7 +3137,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Gyorgy Buzsaki": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -3170,7 +3146,8 @@ const MCN_DOMAINS = {
       ]
     },
     "H Markram": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3178,7 +3155,8 @@ const MCN_DOMAINS = {
       ]
     },
     "H Sebastian Seung": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -3186,7 +3164,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hagai Attias": {
-      "domain": "Signal Processing",
+      "domain": "Other",
+      "subfield": "Signal Processing",
       "topics": [
         "Blind Source Separation Techniques",
         "Speech and Audio Processing",
@@ -3194,7 +3173,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hagai Bergman": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Neurological disorders and treatments",
         "Parkinson's Disease Mechanisms and Treatments",
@@ -3202,7 +3182,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hagit Zabrodsky": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Image Retrieval and Classification Techniques",
         "Medical Image Segmentation Techniques",
@@ -3210,7 +3191,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Haim Sompolinsky": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -3218,7 +3200,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hamish Mehaffey": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Neuroscience and Neuropharmacology Research",
@@ -3226,7 +3209,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hannah Arnson": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Neurobiology and Insect Physiology Research",
@@ -3234,7 +3218,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hannah Payne": {
-      "domain": "Neurology",
+      "domain": "Sensory & Perception",
+      "subfield": "Neurology",
       "topics": [
         "Vestibular and auditory disorders",
         "Neural dynamics and brain function",
@@ -3242,7 +3227,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Harmon Nine": {
-      "domain": "Management Science and Operations Research",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Management Science and Operations Research",
       "topics": [
         "Simulation Techniques and Applications",
         "Model-Driven Software Engineering Techniques",
@@ -3250,7 +3236,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Harvey Karten": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Neuropeptides and Animal Physiology",
@@ -3258,7 +3245,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Harvey Sarah": {
-      "domain": "Social Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Social Psychology",
       "topics": [
         "Team Dynamics and Performance",
         "Creativity in Education and Neuroscience",
@@ -3266,7 +3254,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Heather Dobbins": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Hearing Loss and Rehabilitation",
@@ -3274,13 +3263,15 @@ const MCN_DOMAINS = {
       ]
     },
     "Heather Lennox": {
-      "domain": "Epidemiology",
+      "domain": "Other",
+      "subfield": "Epidemiology",
       "topics": [
         "Trypanosoma species research and implications"
       ]
     },
     "Helga Seebauer": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Plant and animal studies",
@@ -3288,7 +3279,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hemai Parthasarathy": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Genetics, Bioinformatics, and Biomedical Research",
         "Academic Publishing and Open Access",
@@ -3296,7 +3288,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hemant Kudrimoti": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -3304,7 +3297,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Henry Greenside": {
-      "domain": "Computer Networks and Communications",
+      "domain": "Computational & Theoretical",
+      "subfield": "Computer Networks and Communications",
       "topics": [
         "Nonlinear Dynamics and Pattern Formation",
         "Theoretical and Computational Physics",
@@ -3312,7 +3306,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hilary Heuer": {
-      "domain": "Neurology",
+      "domain": "Other",
+      "subfield": "Neurology",
       "topics": [
         "Amyotrophic Lateral Sclerosis Research",
         "Dementia and Cognitive Impairment Research",
@@ -3320,7 +3315,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hiroyoshi Miyakawa": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -3328,7 +3324,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hope Johnson": {
-      "domain": "Health",
+      "domain": "Other",
+      "subfield": "Health",
       "topics": [
         "Vaccine Coverage and Hesitancy",
         "Pneumonia and Respiratory Infections",
@@ -3336,7 +3333,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Howard Eichenbaum": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -3344,7 +3342,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hubert Eichner": {
-      "domain": "Artificial Intelligence",
+      "domain": "Other",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Privacy-Preserving Technologies in Data",
         "Neural dynamics and brain function",
@@ -3352,7 +3351,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Hysell Oviedo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3360,7 +3360,8 @@ const MCN_DOMAINS = {
       ]
     },
     "I Chun Lin": {
-      "domain": "Information Systems",
+      "domain": "Other",
+      "subfield": "Information Systems",
       "topics": [
         "Mobile Learning in Education",
         "Online and Blended Learning",
@@ -3368,7 +3369,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ian Davison": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Olfactory and Sensory Function Studies",
@@ -3376,7 +3378,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ian Joseph": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Particle physics theoretical and experimental studies",
         "High-Energy Particle Collisions Research",
@@ -3384,7 +3387,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Idan Segev": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3392,7 +3396,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ila Fiete": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -3400,7 +3405,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ilan Lampl": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3408,7 +3414,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ilana Witten": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3416,7 +3423,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ilya Nemenman": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Neural dynamics and brain function",
@@ -3424,7 +3432,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Insong Koh": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetic Associations and Epidemiology",
         "Epigenetics and DNA Methylation",
@@ -3432,7 +3441,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Iris Reuveni": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Memory and Neural Mechanisms",
@@ -3440,7 +3450,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Irit Shapira": {
-      "domain": "Hematology",
+      "domain": "Other",
+      "subfield": "Hematology",
       "topics": [
         "Multiple Myeloma Research and Treatments",
         "Wnt/β-catenin signaling in development and cancer",
@@ -3448,7 +3459,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Itamar Landau": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -3456,7 +3468,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ithai Rabinowitch": {
-      "domain": "Aging",
+      "domain": "Cellular & Molecular",
+      "subfield": "Aging",
       "topics": [
         "Genetics, Aging, and Longevity in Model Organisms",
         "Circadian rhythm and melatonin",
@@ -3464,7 +3477,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Iulia Neagu": {
-      "domain": "Sociology and Political Science",
+      "domain": "Other",
+      "subfield": "Sociology and Political Science",
       "topics": [
         "Evolutionary Game Theory and Cooperation",
         "Evolution and Genetic Dynamics",
@@ -3472,7 +3486,8 @@ const MCN_DOMAINS = {
       ]
     },
     "J Michael Gee": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Estrogen and related hormone effects",
         "HER2/EGFR in Cancer Research",
@@ -3480,7 +3495,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jack Gallant": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -3488,7 +3504,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jacob Davidson": {
-      "domain": "Genetics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Genetics",
       "topics": [
         "Insect and Arachnid Ecology and Behavior",
         "Animal Behavior and Reproduction",
@@ -3496,7 +3513,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jacob Rinaldi": {
-      "domain": "Cancer Research",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cancer Research",
       "topics": [
         "Cancer Genomics and Diagnostics",
         "Vestibular and auditory disorders",
@@ -3504,7 +3522,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jaime Eugenin": {
-      "domain": "Endocrine and Autonomic Systems",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Endocrine and Autonomic Systems",
       "topics": [
         "Neuroscience of respiration and sleep",
         "Neuroinflammation and Neurodegeneration Mechanisms",
@@ -3512,7 +3531,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jakob Macke": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -3520,7 +3540,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Beck": {
-      "domain": "Civil and Structural Engineering",
+      "domain": "Other",
+      "subfield": "Civil and Structural Engineering",
       "topics": [
         "Structural Health Monitoring Techniques",
         "Probabilistic and Robust Engineering Design",
@@ -3528,7 +3549,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Dicarlo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Face Recognition and Perception",
@@ -3536,7 +3558,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Finley": {
-      "domain": "Physical Therapy, Sports Therapy and Rehabilitation",
+      "domain": "Other",
+      "subfield": "Physical Therapy, Sports Therapy and Rehabilitation",
       "topics": [
         "Balance, Gait, and Falls Prevention",
         "Motor Control and Adaptation",
@@ -3544,7 +3567,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Fitzgerald": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3552,7 +3576,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Kozloski": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -3560,7 +3585,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James M Bower": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Vestibular and auditory disorders",
@@ -3568,7 +3594,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Winslow": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3576,7 +3603,8 @@ const MCN_DOMAINS = {
       ]
     },
     "James Zackheim": {
-      "domain": "Psychiatry and Mental health",
+      "domain": "Clinical & Disease",
+      "subfield": "Psychiatry and Mental health",
       "topics": [
         "Epilepsy research and treatment",
         "Neurotransmitter Receptor Influence on Behavior",
@@ -3584,7 +3612,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jan Karbowski": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -3592,7 +3621,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Janet Best": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurotransmitter Receptor Influence on Behavior",
         "Neuroscience and Neuropharmacology Research",
@@ -3600,7 +3630,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Janet Casagrand": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect and Arachnid Ecology and Behavior",
@@ -3608,7 +3639,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Janneke Jehee": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -3616,7 +3648,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jason Kutch": {
-      "domain": "Urology",
+      "domain": "Other",
+      "subfield": "Urology",
       "topics": [
         "Urinary Bladder and Prostate Research",
         "Pelvic floor disorders treatments",
@@ -3624,7 +3657,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jason Prentice": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -3632,7 +3666,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jason Puchalla": {
-      "domain": "Astronomy and Astrophysics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Astronomy and Astrophysics",
       "topics": [
         "Radio Astronomy Observations and Technology",
         "Cosmology and Gravitation Theories",
@@ -3640,7 +3675,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jason Ritt": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Photoreceptor and optogenetics research",
@@ -3648,7 +3684,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jed Hartings": {
-      "domain": "Neurology",
+      "domain": "Other",
+      "subfield": "Neurology",
       "topics": [
         "Traumatic Brain Injury and Neurovascular Disturbances",
         "Neuroscience and Neuropharmacology Research",
@@ -3656,7 +3693,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeff Beck": {
-      "domain": "Electrical and Electronic Engineering",
+      "domain": "Other",
+      "subfield": "Electrical and Electronic Engineering",
       "topics": [
         "Advanced Semiconductor Detectors and Materials",
         "Advanced Optical Sensing Technologies",
@@ -3664,7 +3702,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeff W Lichtman": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Cell Image Analysis Techniques",
         "Advanced Fluorescence Microscopy Techniques",
@@ -3672,7 +3711,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeffrey Arle": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Neurological disorders and treatments",
         "Pain Management and Treatment",
@@ -3680,7 +3720,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeffrey Gauthier": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -3688,7 +3729,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeffrey Segall": {
-      "domain": "Oncology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Oncology",
       "topics": [
         "Cancer Cells and Metastasis",
         "Cellular Mechanics and Interactions",
@@ -3696,7 +3738,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeffrey Smith": {
-      "domain": "Endocrine and Autonomic Systems",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Endocrine and Autonomic Systems",
       "topics": [
         "Neuroscience of respiration and sleep",
         "Sleep and Wakefulness Research",
@@ -3704,21 +3747,24 @@ const MCN_DOMAINS = {
       ]
     },
     "Jennelle Liljestrand": {
-      "domain": "Clinical Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Clinical Psychology",
       "topics": [
         "Psychotherapy Techniques and Applications",
         "Family Support in Illness"
       ]
     },
     "Jennie Halfant": {
-      "domain": "General Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "General Psychology",
       "topics": [
         "Academic and Historical Perspectives in Psychology",
         "Educational and Psychological Assessments"
       ]
     },
     "Jennifer Blackwell": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -3726,7 +3772,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jennifer Li": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Neural dynamics and brain function",
@@ -3734,7 +3781,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jennifer Raymond": {
-      "domain": "Neurology",
+      "domain": "Sensory & Perception",
+      "subfield": "Neurology",
       "topics": [
         "Vestibular and auditory disorders",
         "Neural dynamics and brain function",
@@ -3742,7 +3790,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jennifer Resnik": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Hearing, Cochlea, Tinnitus, Genetics",
         "Neural dynamics and brain function",
@@ -3750,7 +3799,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jenny Saffran": {
-      "domain": "Developmental and Educational Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Developmental and Educational Psychology",
       "topics": [
         "Language Development and Disorders",
         "Child and Animal Learning Development",
@@ -3758,7 +3808,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeremy Ahouse": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Other",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Monoclonal and Polyclonal Antibodies Research",
         "T-cell and B-cell Immunology",
@@ -3766,7 +3817,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jeremy Dittman": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Cellular transport and secretion",
         "Lipid Membrane Structure and Behavior",
@@ -3774,7 +3826,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jerome Mertz": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Optical Coherence Tomography Applications",
@@ -3782,7 +3835,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jesper Tegner": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Bioinformatics and Genomic Networks",
         "Gene Regulatory Network Analysis",
@@ -3790,7 +3844,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jesse Goldberg": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -3798,7 +3853,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jianhua Cang": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Neuroscience and Neuropharmacology Research",
@@ -3806,7 +3862,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jiawei Zhang": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Advanced Image Processing Techniques",
         "Image and Signal Denoising Methods",
@@ -3814,7 +3871,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jill Nicolaus": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -3822,7 +3880,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jim Cummings": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Particle physics theoretical and experimental studies",
         "Neutrino Physics Research",
@@ -3830,7 +3889,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jinsook Roh": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Muscle activation and electromyography studies",
         "Stroke Rehabilitation and Recovery",
@@ -3838,7 +3898,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jinyao Yan": {
-      "domain": "Computer Networks and Communications",
+      "domain": "Systems & Circuits",
+      "subfield": "Computer Networks and Communications",
       "topics": [
         "Network Traffic and Congestion Control",
         "Image and Video Quality Assessment",
@@ -3846,7 +3907,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jisoon Ihm": {
-      "domain": "Atomic and Molecular Physics, and Optics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Atomic and Molecular Physics, and Optics",
       "topics": [
         "Semiconductor Quantum Structures and Devices",
         "Graphene research and applications",
@@ -3854,7 +3916,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Anderson": {
-      "domain": "Artificial Intelligence",
+      "domain": "Other",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Intelligent Tutoring Systems and Adaptive Learning",
         "Child and Animal Learning Development",
@@ -3862,7 +3925,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Butman": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Other",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Advanced MRI Techniques and Applications",
         "Traumatic Brain Injury and Neurovascular Disturbances",
@@ -3870,7 +3934,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Douglass": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Animal Behavior and Reproduction",
@@ -3878,7 +3943,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John E Lisman": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Memory and Neural Mechanisms",
@@ -3886,7 +3952,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John G Hildebrand": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect Pheromone Research and Control",
@@ -3894,7 +3961,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Hopfield": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -3902,7 +3970,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Huguenard": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -3910,7 +3979,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Kebabian": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Receptor Mechanisms and Signaling",
         "Neurotransmitter Receptor Influence on Behavior",
@@ -3918,7 +3988,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Krakauer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Stroke Rehabilitation and Recovery",
@@ -3926,7 +3997,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Maunsell": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -3934,7 +4006,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Middlebrooks": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Hearing Loss and Rehabilitation",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -3942,7 +4015,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Murray": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Neural dynamics and brain function",
@@ -3950,7 +4024,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Pierce": {
-      "domain": "Pulmonary and Respiratory Medicine",
+      "domain": "Clinical & Disease",
+      "subfield": "Pulmonary and Respiratory Medicine",
       "topics": [
         "Chronic Obstructive Pulmonary Disease (COPD) Research",
         "Protease and Inhibitor Mechanisms",
@@ -3958,7 +4033,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Rinzel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -3966,7 +4042,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Rose": {
-      "domain": "Economics and Econometrics",
+      "domain": "Other",
+      "subfield": "Economics and Econometrics",
       "topics": [
         "Economic and Environmental Valuation",
         "Transportation Planning and Optimization",
@@ -3974,7 +4051,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Uhley": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neurobiology and Insect Physiology Research",
@@ -3982,7 +4060,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John White": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -3990,7 +4069,8 @@ const MCN_DOMAINS = {
       ]
     },
     "John Widloski": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -3998,7 +4078,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Johnatan Aljadeff": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -4006,7 +4087,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Bettencourt": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4014,7 +4096,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Drover": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -4022,7 +4105,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Fritz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -4030,7 +4114,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Leong": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect and Arachnid Ecology and Behavior",
@@ -4038,7 +4123,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Murnick": {
-      "domain": "Pediatrics, Perinatology and Child Health",
+      "domain": "Other",
+      "subfield": "Pediatrics, Perinatology and Child Health",
       "topics": [
         "Neonatal and fetal brain pathology",
         "Infant Development and Preterm Care",
@@ -4046,7 +4132,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Pillow": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4054,7 +4141,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Rubin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -4062,7 +4150,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan Simon": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -4070,7 +4159,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathan W. Pillow": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4078,7 +4168,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jonathon Shlens": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Machine Learning & AI",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Advanced Neural Network Applications",
         "Domain Adaptation and Few-Shot Learning",
@@ -4086,7 +4177,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jordan Feidler": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4094,7 +4186,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jordan Sorokin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4102,7 +4195,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joseph Atick": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Black Holes and Theoretical Physics",
@@ -4110,7 +4204,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joseph Bergan": {
-      "domain": "Social Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Social Psychology",
       "topics": [
         "Neuroendocrine regulation and behavior",
         "Olfactory and Sensory Function Studies",
@@ -4118,7 +4213,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joseph Paton": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -4126,7 +4222,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joshua Bassett": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -4134,7 +4231,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joshua Berke": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4142,7 +4240,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joshua Goldberg": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -4150,7 +4249,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Joshua Shaevitz": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Bacterial Genetics and Biotechnology",
         "Bacteriophages and microbial interactions",
@@ -4158,7 +4258,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jozsef Csicsvari": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Memory and Neural Mechanisms",
@@ -4166,7 +4267,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Juan Gao": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Medical Imaging Techniques and Applications",
         "Neural dynamics and brain function",
@@ -4174,7 +4276,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Juan Nunez-Iglesias": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene expression and cancer classification",
         "Bioinformatics and Genomic Networks",
@@ -4182,7 +4285,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Judith Hirsch": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4190,7 +4294,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Julia Udell": {
-      "domain": "Immunology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Immunology",
       "topics": [
         "T-cell and B-cell Immunology",
         "Immunotherapy and Immune Responses",
@@ -4198,7 +4303,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Julie Goulet": {
-      "domain": "Nature and Landscape Conservation",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Nature and Landscape Conservation",
       "topics": [
         "Fish biology, ecology, and behavior",
         "Marine animal studies overview",
@@ -4206,7 +4312,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Julie Haas": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4214,7 +4321,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Julien Mayor": {
-      "domain": "Developmental and Educational Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Developmental and Educational Psychology",
       "topics": [
         "Language Development and Disorders",
         "Child and Animal Learning Development",
@@ -4222,7 +4330,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Julijana Gjorgjieva": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4230,7 +4339,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jun Zhu": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Adversarial Robustness in Machine Learning",
         "Domain Adaptation and Few-Shot Learning",
@@ -4238,7 +4348,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jurgen Klingauf": {
-      "domain": "Molecular Biology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Molecular Biology",
       "topics": [
         "Lipid Membrane Structure and Behavior",
         "Cellular transport and secretion",
@@ -4246,7 +4357,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Jurgen Kupper": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Neuroscience and Neuropharmacology Research",
@@ -4254,7 +4366,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Justin Werfel": {
-      "domain": "Mechanical Engineering",
+      "domain": "Other",
+      "subfield": "Mechanical Engineering",
       "topics": [
         "Modular Robots and Swarm Intelligence",
         "Distributed Control Multi-Agent Systems",
@@ -4262,7 +4375,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kamal Sen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Vocal Communication and Behavior",
@@ -4270,7 +4384,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kameron Harris": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Systems & Circuits",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Complex Network Analysis Techniques",
@@ -4278,7 +4393,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kamesh Krishnamurthy": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -4286,7 +4402,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Karel Svoboda": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4294,7 +4411,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Karen Schroeder": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neuroscience and Neural Engineering",
@@ -4302,7 +4420,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Karen Sigvardt": {
-      "domain": "Neurology",
+      "domain": "Clinical & Disease",
+      "subfield": "Neurology",
       "topics": [
         "Parkinson's Disease Mechanisms and Treatments",
         "Neurological disorders and treatments",
@@ -4310,7 +4429,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Karin Knudson": {
-      "domain": "Computational Mechanics",
+      "domain": "Other",
+      "subfield": "Computational Mechanics",
       "topics": [
         "Sparse and Compressive Sensing Techniques",
         "Blind Source Separation Techniques",
@@ -4318,7 +4438,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Karl Deisseroth": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Photoreceptor and optogenetics research",
         "Neuroscience and Neuropharmacology Research",
@@ -4326,7 +4447,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kate Jensen": {
-      "domain": "Research and Theory",
+      "domain": "Other",
+      "subfield": "Research and Theory",
       "topics": [
         "Nursing education and management",
         "Family and Patient Care in Intensive Care Units",
@@ -4334,7 +4456,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Katherine Nagel": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Animal Behavior and Reproduction",
@@ -4342,7 +4465,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kathleen Champion": {
-      "domain": "Statistical and Nonlinear Physics",
+      "domain": "Machine Learning & AI",
+      "subfield": "Statistical and Nonlinear Physics",
       "topics": [
         "Model Reduction and Neural Networks",
         "Probabilistic and Robust Engineering Design",
@@ -4350,7 +4474,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Katrina Macleod": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -4358,7 +4483,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Keith Purpura": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4366,7 +4492,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kelly Suter": {
-      "domain": "Reproductive Medicine",
+      "domain": "Other",
+      "subfield": "Reproductive Medicine",
       "topics": [
         "Hypothalamic control of reproductive hormones",
         "Neuroendocrine regulation and behavior",
@@ -4374,7 +4501,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kelsey Allen": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Reinforcement Learning in Robotics",
         "Child and Animal Learning Development",
@@ -4382,7 +4510,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kenneth Miller": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4390,7 +4519,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kerry Delaney": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neurobiology and Insect Physiology Research",
@@ -4398,7 +4528,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kevan Martin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4406,7 +4537,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kevin Briggman": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -4414,7 +4546,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kevin Fox": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -4422,7 +4555,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kevin Martin": {
-      "domain": "Management, Monitoring, Policy and Law",
+      "domain": "Other",
+      "subfield": "Management, Monitoring, Policy and Law",
       "topics": [
         "Coastal and Marine Management",
         "Marine and fisheries research",
@@ -4430,7 +4564,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kevin Spitler": {
-      "domain": "Genetics",
+      "domain": "Other",
+      "subfield": "Genetics",
       "topics": [
         "Glioma Diagnosis and Treatment",
         "Neural dynamics and brain function",
@@ -4438,7 +4573,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kiah Hardcastle": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neural dynamics and brain function",
@@ -4446,7 +4582,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kimberly Montgomery": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Face Recognition and Perception",
         "Action Observation and Synchronization",
@@ -4454,7 +4591,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Klaus Obermayer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4462,7 +4600,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kolia Sadeghi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Sleep and Wakefulness Research",
@@ -4470,7 +4609,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kris Chaisanguanthum": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4478,7 +4618,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Krishna Shenoy": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neuroscience and Neural Engineering",
@@ -4486,7 +4627,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Krishnan Padmanabhan": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Interconnection Networks and Systems",
@@ -4494,7 +4636,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kristen Richardson": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -4502,7 +4645,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Krisztina Szalisznyo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -4510,7 +4654,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kukjin Kang": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4518,7 +4663,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kurt Ahrens": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4526,7 +4672,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kurt Haas": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -4534,7 +4681,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Kyle Lillis": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -4542,7 +4690,8 @@ const MCN_DOMAINS = {
       ]
     },
     "L E Moore": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -4550,7 +4699,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lacey Kitch": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -4558,7 +4708,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lane McIntosh": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4566,7 +4717,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Larissa Albantakis": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Embodied and Extended Cognition",
@@ -4574,7 +4726,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Larry Abbott": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Biophysics & Physics",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Particle physics theoretical and experimental studies",
@@ -4582,7 +4735,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Laura Lewis": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Advanced MRI Techniques and Applications",
@@ -4590,7 +4744,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Laura Reece": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Memory and Neural Mechanisms",
@@ -4598,7 +4753,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lavi Shpigelman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -4606,7 +4762,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lawrence Cauller": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -4614,7 +4771,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lawrence Jackel": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Advanced Neural Network Applications",
@@ -4622,7 +4780,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lawrence Saul": {
-      "domain": "Signal Processing",
+      "domain": "Other",
+      "subfield": "Signal Processing",
       "topics": [
         "Speech and Audio Processing",
         "Speech Recognition and Synthesis",
@@ -4630,7 +4789,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Leenoy Meshulam": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -4638,7 +4798,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lena Veit": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -4646,7 +4807,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Leon Cooper": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -4654,7 +4816,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Leonardo Mesquita": {
-      "domain": "Biochemistry",
+      "domain": "Other",
+      "subfield": "Biochemistry",
       "topics": [
         "Phytochemicals and Antioxidant Activities",
         "Essential Oils and Antimicrobial Activity",
@@ -4662,7 +4825,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Leonid Mirny": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Genomics and Chromatin Dynamics",
         "RNA Research and Splicing",
@@ -4670,7 +4834,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Leslie Osborne": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -4678,7 +4843,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Liam Paninski": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -4686,7 +4852,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lindsay Hough": {
-      "domain": "Immunology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Immunology",
       "topics": [
         "Mast cells and histamine",
         "Receptor Mechanisms and Signaling",
@@ -4694,7 +4861,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Liran Szlak": {
-      "domain": "Management Science and Operations Research",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Management Science and Operations Research",
       "topics": [
         "Advanced Bandit Algorithms Research",
         "Cognitive Radio Networks and Spectrum Sensing",
@@ -4702,7 +4870,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lisa Roth": {
-      "domain": "Pathology and Forensic Medicine",
+      "domain": "Other",
+      "subfield": "Pathology and Forensic Medicine",
       "topics": [
         "Lymphoma Diagnosis and Treatment",
         "Cancer Genomics and Diagnostics",
@@ -4710,7 +4879,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Liu Dave Liu": {
-      "domain": "Condensed Matter Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Condensed Matter Physics",
       "topics": [
         "GaN-based semiconductor devices and materials",
         "Silicon Carbide Semiconductor Technologies",
@@ -4718,7 +4888,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Loren Alving": {
-      "domain": "Psychiatry and Mental health",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Psychiatry and Mental health",
       "topics": [
         "Dementia and Cognitive Impairment Research",
         "Cognitive Functions and Memory",
@@ -4726,7 +4897,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Loren Frank": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -4734,7 +4906,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Loren M. Frank": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -4742,7 +4915,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lorenz Pammer": {
-      "domain": "Hematology",
+      "domain": "Clinical & Disease",
+      "subfield": "Hematology",
       "topics": [
         "Iron Metabolism and Disorders",
         "Hemoglobinopathies and Related Disorders",
@@ -4750,7 +4924,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lorenzo Fontolan": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -4758,7 +4933,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lorin Milescu": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Neural dynamics and brain function",
@@ -4766,7 +4942,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Louis Neltner": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -4774,7 +4951,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lubert Stryer": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Photoreceptor and optogenetics research",
         "Retinal Development and Disorders",
@@ -4782,7 +4960,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lucia Vaina": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -4790,7 +4969,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Luk Chong Yeung": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -4798,7 +4978,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Lung Hao Tai": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -4806,7 +4987,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Malcolm D Campbell": {
-      "domain": "Polymers and Plastics",
+      "domain": "Other",
+      "subfield": "Polymers and Plastics",
       "topics": [
         "Natural Fiber Reinforced Composites",
         "Energetic Materials and Combustion",
@@ -4814,7 +4996,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mandyam V Srinivasan": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect and Arachnid Ecology and Behavior",
@@ -4822,7 +5005,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maneesh Sahani": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -4830,7 +5014,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Manisha Sinha": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetic and Clinical Aspects of Sex Determination and Chromosomal Abnormalities",
         "Sperm and Testicular Function",
@@ -4838,7 +5023,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marcelo Magnasco": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -4846,7 +5032,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marcelo Mattar": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -4854,7 +5041,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marco Herrera-Valdez": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -4862,7 +5050,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marcos Cantu": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Hearing Loss and Rehabilitation",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -4870,7 +5059,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Margaret S Livingstone": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -4878,7 +5068,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maria Andreu": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Developmental Biology and Gene Regulation",
         "Genomics and Chromatin Dynamics",
@@ -4886,7 +5077,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maria Geffen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -4894,7 +5086,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maria Neimark": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -4902,7 +5095,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mariel Velez": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "EEG and Brain-Computer Interfaces",
@@ -4910,7 +5104,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marina Fridman": {
-      "domain": "Cancer Research",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cancer Research",
       "topics": [
         "Cancer-related molecular mechanisms research",
         "MicroRNA in disease regulation",
@@ -4918,7 +5113,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Bear": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -4926,7 +5122,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Beenhakker": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -4934,7 +5131,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark E Nelson": {
-      "domain": "Nature and Landscape Conservation",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Nature and Landscape Conservation",
       "topics": [
         "Fish biology, ecology, and behavior",
         "Ichthyology and Marine Biology",
@@ -4942,7 +5140,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Goldman": {
-      "domain": "Epidemiology",
+      "domain": "Other",
+      "subfield": "Epidemiology",
       "topics": [
         "Substance Abuse Treatment and Outcomes",
         "Neural dynamics and brain function",
@@ -4950,7 +5149,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Kramer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -4958,7 +5158,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Mazurek": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -4966,7 +5167,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Roper": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Plant and animal studies",
         "Neurobiology and Insect Physiology Research",
@@ -4974,7 +5176,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark S. Goldman": {
-      "domain": "Epidemiology",
+      "domain": "Other",
+      "subfield": "Epidemiology",
       "topics": [
         "Substance Abuse Treatment and Outcomes",
         "Neural dynamics and brain function",
@@ -4982,7 +5185,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Schnitzer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Fluorescence Microscopy Techniques",
@@ -4990,7 +5194,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Tommerdahl": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Tactile and Sensory Interactions",
         "Neural dynamics and brain function",
@@ -4998,7 +5203,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mark Van Rossum": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5006,7 +5212,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Markus Lappe": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -5014,7 +5221,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Markus Meister": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -5022,7 +5230,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marla Feller": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -5030,7 +5239,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Marsa Taheri": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5038,7 +5248,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Martin Huber": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -5046,7 +5257,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Martin Wainwright": {
-      "domain": "Statistics and Probability",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Statistics and Probability",
       "topics": [
         "Statistical Methods and Inference",
         "Sparse and Compressive Sensing Techniques",
@@ -5054,7 +5266,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mary Kennedy": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Mitochondrial Function and Pathology",
@@ -5062,7 +5275,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maryam Bijanzadeh": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -5070,7 +5284,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mate Lengyel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -5078,7 +5293,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mathew Jones": {
-      "domain": "Neurology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Neurology",
       "topics": [
         "Neuroinflammation and Neurodegeneration Mechanisms",
         "Alzheimer's disease research and treatments",
@@ -5086,7 +5302,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Matteo Mischiati": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Motor Control and Adaptation",
@@ -5094,7 +5311,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Matthew Fellows": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neural dynamics and brain function",
@@ -5102,7 +5320,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Matthew Mcginley": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5110,7 +5329,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Matthew Wilson": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5118,7 +5338,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Matthieu Dacher": {
-      "domain": "Insect Science",
+      "domain": "Cellular & Molecular",
+      "subfield": "Insect Science",
       "topics": [
         "Insect and Pesticide Research",
         "Plant and animal studies",
@@ -5126,7 +5347,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Matthieu Wyart": {
-      "domain": "Materials Chemistry",
+      "domain": "Other",
+      "subfield": "Materials Chemistry",
       "topics": [
         "Material Dynamics and Properties",
         "Theoretical and Computational Physics",
@@ -5134,7 +5356,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maurice A Smith": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Muscle activation and electromyography studies",
@@ -5142,7 +5365,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maurice Lee": {
-      "domain": "History",
+      "domain": "Other",
+      "subfield": "History",
       "topics": [
         "Scottish History and National Identity",
         "American Constitutional Law and Politics",
@@ -5150,7 +5374,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maurizio De Pitta": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5158,7 +5383,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Max Schiff": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5166,7 +5392,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Maxim Manakov": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -5174,7 +5401,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mayank Mehta": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -5182,7 +5410,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Melissa Warden": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -5190,7 +5419,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Merav Stern": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -5198,7 +5428,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Micah Siegel": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Neuroscience and Neural Engineering",
@@ -5206,7 +5437,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Beierlein": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5214,7 +5446,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Berry": {
-      "domain": "Computational Theory and Mathematics",
+      "domain": "Other",
+      "subfield": "Computational Theory and Mathematics",
       "topics": [
         "Matrix Theory and Algorithms",
         "Parallel Computing and Optimization Techniques",
@@ -5222,7 +5455,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Brainard": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -5230,7 +5464,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Connell": {
-      "domain": "Education",
+      "domain": "Other",
+      "subfield": "Education",
       "topics": [
         "Mathematics Education and Teaching Techniques",
         "Education and Technology Integration",
@@ -5238,7 +5473,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Economo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -5246,7 +5482,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Famulare": {
-      "domain": "Modeling and Simulation",
+      "domain": "Other",
+      "subfield": "Modeling and Simulation",
       "topics": [
         "COVID-19 epidemiological studies",
         "Viral Infections and Immunology Research",
@@ -5254,7 +5491,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Farries": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Vocal Communication and Behavior",
@@ -5262,7 +5500,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Frank": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Neural dynamics and brain function",
@@ -5270,7 +5509,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Gordon": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect Utilization and Effects",
@@ -5278,7 +5518,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Hasselmo": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -5286,7 +5527,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Hausser": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5294,7 +5536,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Hines": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -5302,7 +5545,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Hucka": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Microbial Metabolic Engineering and Bioproduction",
@@ -5310,7 +5554,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Irizarry": {
-      "domain": "Physiology",
+      "domain": "Clinical & Disease",
+      "subfield": "Physiology",
       "topics": [
         "Alzheimer's disease research and treatments",
         "Dementia and Cognitive Impairment Research",
@@ -5318,7 +5563,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Mascagni": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Computational & Theoretical",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Chaos-based Image/Signal Encryption",
         "Mathematical Approximation and Integration",
@@ -5326,7 +5572,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Mauk": {
-      "domain": "Neurology",
+      "domain": "Sensory & Perception",
+      "subfield": "Neurology",
       "topics": [
         "Vestibular and auditory disorders",
         "Neuroscience and Neuropharmacology Research",
@@ -5334,7 +5581,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Merzenich": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -5342,7 +5590,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Pesavento": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5350,7 +5599,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Rule": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -5358,7 +5608,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Schwemmer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -5366,7 +5617,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Shadlen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -5374,7 +5626,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Speight": {
-      "domain": "Oral Surgery",
+      "domain": "Other",
+      "subfield": "Oral Surgery",
       "topics": [
         "Oral and Maxillofacial Pathology",
         "Oral Health Pathology and Treatment",
@@ -5382,7 +5635,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Stryker": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5390,7 +5644,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Vanier": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5398,7 +5653,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michael Webster": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Animal Behavior and Reproduction",
         "Fish Ecology and Management Studies",
@@ -5406,7 +5662,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michal Moshkovitz": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Machine Learning and Algorithms",
         "Explainable Artificial Intelligence (XAI)",
@@ -5414,7 +5671,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michal Rivlin": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Neurological disorders and treatments",
@@ -5422,7 +5680,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Michale Fee": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -5430,7 +5689,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mikhail Proskurin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -5438,7 +5698,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mikio Aoi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Genetics, Aging, and Longevity in Model Organisms",
@@ -5446,7 +5707,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Milena Raffi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Balance, Gait, and Falls Prevention",
@@ -5454,7 +5716,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Milena Winograd": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5462,7 +5725,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Miles Whittington": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5470,7 +5734,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mini Kurian": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Muscle activation and electromyography studies",
         "Spinal Cord Injury Research",
@@ -5478,7 +5743,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Minjoon Kouh": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -5486,7 +5752,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mircea Steriade": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5494,7 +5761,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Misha Tsodyks": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -5502,7 +5770,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mitchell Maltenfort": {
-      "domain": "Surgery",
+      "domain": "Other",
+      "subfield": "Surgery",
       "topics": [
         "Orthopedic Infections and Treatments",
         "Total Knee Arthroplasty Outcomes",
@@ -5510,7 +5779,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mohan Krithika": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Visual perception and processing mechanisms",
@@ -5518,7 +5788,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mor Ben-Tov": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -5526,7 +5797,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Moshe Abeles": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -5534,7 +5806,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Moshe Rapp": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5542,7 +5815,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Murtaza Mogri": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neural Engineering",
         "Photoreceptor and optogenetics research",
@@ -5550,7 +5824,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Mv Srinivasan": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Plant and animal studies",
         "Insect and Pesticide Research",
@@ -5558,7 +5833,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Naama Barkai": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Genomics and Chromatin Dynamics",
         "Fungal and yeast genetics research",
@@ -5566,7 +5842,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Naama Brenner": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Evolution and Genetic Dynamics",
@@ -5574,7 +5851,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Naama Kadmon-Harpaz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Motor Control and Adaptation",
@@ -5582,7 +5860,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Naama Parush": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neurological disorders and treatments",
@@ -5590,7 +5869,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nachum Ulanovsky": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Bat Biology and Ecology Studies",
@@ -5598,7 +5878,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Naftali Tishby": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Machine Learning and Algorithms",
@@ -5606,7 +5887,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Namburi Praneeth": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -5614,7 +5896,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nancy J. Kopell": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5622,7 +5905,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nancy Kanwisher": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Face Recognition and Perception",
         "Visual perception and processing mechanisms",
@@ -5630,7 +5914,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nancy Kopell": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5638,7 +5923,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Natalie Steinemann": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -5646,7 +5932,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Natasha Cayco Gajic": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -5654,7 +5941,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nate Sawtell": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5662,7 +5950,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nathaniel Daw": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Neural dynamics and brain function",
@@ -5670,7 +5959,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nava Rubin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -5678,7 +5968,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Naveen Nagarajan": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Photoacoustic and Ultrasonic Imaging",
@@ -5686,7 +5977,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Neil Berman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5694,7 +5986,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nelson Spruston": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5702,7 +5995,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nicholas Poolos": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Ion channel regulation and function",
@@ -5710,7 +6004,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nicholas Steinmetz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -5718,7 +6013,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nicolas Fourcaud": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Olfactory and Sensory Function Studies",
@@ -5726,7 +6022,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nicole Rust": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -5734,7 +6031,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nikos Logothetis": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -5742,7 +6040,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Nimrod Shaham": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -5750,7 +6049,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Noah Young": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Photoreceptor and optogenetics research",
@@ -5758,7 +6058,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Noam Slonim": {
-      "domain": "Artificial Intelligence",
+      "domain": "Other",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Topic Modeling",
         "Natural Language Processing Techniques",
@@ -5766,7 +6067,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Noga Weiss Mosheiff": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -5774,7 +6076,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Norberto Grzywacz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Retinal Development and Disorders",
@@ -5782,7 +6085,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ofer Feinerman": {
-      "domain": "Genetics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Genetics",
       "topics": [
         "Insect and Arachnid Ecology and Behavior",
         "Plant and animal studies",
@@ -5790,7 +6094,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ojvind Bernander": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -5798,7 +6103,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Olivia Gozel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -5806,7 +6112,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Olivier Marre": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -5814,7 +6121,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Omri Barak": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -5822,7 +6130,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Opher Donchin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Vestibular and auditory disorders",
@@ -5830,7 +6139,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Oren Shriki": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -5838,7 +6148,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Pamela Reinagel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -5846,7 +6157,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Panagiota Theodoni": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -5854,7 +6166,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Partha Mitra": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Cell Image Analysis Techniques",
@@ -5862,7 +6175,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Parveen Bawa": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Muscle activation and electromyography studies",
         "Motor Control and Adaptation",
@@ -5870,7 +6184,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Patricia Di Lorenzo": {
-      "domain": "Nutrition and Dietetics",
+      "domain": "Other",
+      "subfield": "Nutrition and Dietetics",
       "topics": [
         "Biochemical Analysis and Sensing Techniques",
         "Olfactory and Sensory Function Studies",
@@ -5878,7 +6193,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Patrick Lynn": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "CRISPR and Genetic Engineering",
         "Bacterial Genetics and Biotechnology",
@@ -5886,7 +6202,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Patrick Meuth": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Ion channel regulation and function",
@@ -5894,7 +6211,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Paul Adams": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Neuroscience and Neuropharmacology Research",
@@ -5902,7 +6220,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Paul Bush": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -5910,7 +6229,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Paul Frankel": {
-      "domain": "Water Science and Technology",
+      "domain": "Other",
+      "subfield": "Water Science and Technology",
       "topics": [
         "Water Quality Monitoring Technologies",
         "Angiogenesis and VEGF in Cancer",
@@ -5918,7 +6238,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Paul Hand": {
-      "domain": "Computational Mechanics",
+      "domain": "Other",
+      "subfield": "Computational Mechanics",
       "topics": [
         "Sparse and Compressive Sensing Techniques",
         "Advanced X-ray Imaging Techniques",
@@ -5926,7 +6247,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Paul Moore": {
-      "domain": "Ecology",
+      "domain": "Other",
+      "subfield": "Ecology",
       "topics": [
         "Crustacean biology and ecology",
         "Animal Behavior and Reproduction",
@@ -5934,7 +6256,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Peiyuan Wang": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Medical Image Segmentation Techniques",
         "AI in cancer detection",
@@ -5942,7 +6265,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Peter Braam": {
-      "domain": "Geometry and Topology",
+      "domain": "Other",
+      "subfield": "Geometry and Topology",
       "topics": [
         "Geometric and Algebraic Topology",
         "Advanced Data Storage Technologies",
@@ -5950,7 +6274,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Peter Dayan": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -5958,7 +6283,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Peter Latham": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -5966,7 +6292,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Petri Ala-Laurila": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -5974,7 +6301,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Phillip Larimer": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -5982,7 +6310,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Pooja Viswanathan": {
-      "domain": "Occupational Therapy",
+      "domain": "Other",
+      "subfield": "Occupational Therapy",
       "topics": [
         "Assistive Technology in Communication and Mobility",
         "Gaze Tracking and Assistive Technology",
@@ -5990,7 +6319,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Pranay Goel": {
-      "domain": "Orthopedics and Sports Medicine",
+      "domain": "Other",
+      "subfield": "Orthopedics and Sports Medicine",
       "topics": [
         "Bone health and osteoporosis research",
         "Diabetes Management and Research",
@@ -5998,7 +6328,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Pratik Mukherjee": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Advanced Neuroimaging Techniques and Applications",
         "Traumatic Brain Injury Research",
@@ -6006,7 +6337,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Pyle Ryan": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -6014,7 +6346,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Quan Wen": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Advanced Steganography and Watermarking Techniques",
         "Advanced Image and Video Retrieval Techniques",
@@ -6022,7 +6355,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Quentin Huys": {
-      "domain": "Experimental and Cognitive Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Experimental and Cognitive Psychology",
       "topics": [
         "Mental Health Research Topics",
         "Neural and Behavioral Psychology Studies",
@@ -6030,7 +6364,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rachel Trana": {
-      "domain": "Social Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Social Psychology",
       "topics": [
         "Bullying, Victimization, and Aggression",
         "Hate Speech and Cyberbullying Detection",
@@ -6038,7 +6373,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rafael Yuste": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -6046,7 +6382,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rainer Engelken": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6054,7 +6391,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Raj Gandhi": {
-      "domain": "Nuclear and High Energy Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Nuclear and High Energy Physics",
       "topics": [
         "Neutrino Physics Research",
         "Astrophysics and Cosmic Phenomena",
@@ -6062,7 +6400,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ralf Wessel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -6070,7 +6409,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Raman Dhruva": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6078,7 +6418,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ramnarayan Ramachandran": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Hearing Loss and Rehabilitation",
         "Hearing, Cochlea, Tinnitus, Genetics",
@@ -6086,7 +6427,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ran Rubin": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6094,7 +6436,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Randolf Menzel": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Plant and animal studies",
@@ -6102,7 +6445,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rani Ben-Yishai": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -6110,7 +6454,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ranit Aharonov-Barki": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Reinforcement Learning in Robotics",
         "Advanced Memory and Neural Computing",
@@ -6118,7 +6463,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ranu Jung": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Muscle activation and electromyography studies",
         "Neuroscience and Neural Engineering",
@@ -6126,7 +6472,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rava Azeredo Da Silveira": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -6134,7 +6481,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rebecca Mease": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -6142,7 +6490,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rebecca Shafee": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Genetic Associations and Epidemiology",
         "Astrophysical Phenomena and Observations",
@@ -6150,7 +6499,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Reiko Maki Fitzsimonds": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Photoreceptor and optogenetics research",
@@ -6158,7 +6508,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Remus Osan": {
-      "domain": "Pharmaceutical Science",
+      "domain": "Clinical & Disease",
+      "subfield": "Pharmaceutical Science",
       "topics": [
         "Drug Solubulity and Delivery Systems",
         "Advanced Drug Delivery Systems",
@@ -6166,7 +6517,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Reynaldo Pinto": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6174,7 +6526,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Reza Shadmehr": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Motor Control and Adaptation",
         "Action Observation and Synchronization",
@@ -6182,7 +6535,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ricardo Merino": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Photoreceptor and optogenetics research",
         "Neuroscience and Neuropharmacology Research",
@@ -6190,7 +6544,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Riccardo Barbieri": {
-      "domain": "Cardiology and Cardiovascular Medicine",
+      "domain": "Other",
+      "subfield": "Cardiology and Cardiovascular Medicine",
       "topics": [
         "Heart Rate Variability and Autonomic Control",
         "EEG and Brain-Computer Interfaces",
@@ -6198,7 +6553,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Richard Andersen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "EEG and Brain-Computer Interfaces",
         "Neural dynamics and brain function",
@@ -6206,7 +6562,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Richard Aslin": {
-      "domain": "Developmental and Educational Psychology",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Developmental and Educational Psychology",
       "topics": [
         "Language Development and Disorders",
         "Child and Animal Learning Development",
@@ -6214,7 +6571,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Richard D Rabbitt": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Hearing, Cochlea, Tinnitus, Genetics",
         "Vestibular and auditory disorders",
@@ -6222,7 +6580,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Richard Hahnloser": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -6230,7 +6589,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rishikesh Narayanan": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -6238,7 +6598,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Buss": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Neuroscience and Neuropharmacology Research",
@@ -6246,7 +6607,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Clewley": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -6254,7 +6616,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert De Ruyter Van Steveninck": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -6262,7 +6625,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Fettiplace": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Hearing, Cochlea, Tinnitus, Genetics",
         "Marine animal studies overview",
@@ -6270,7 +6634,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Froemke": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroendocrine regulation and behavior",
@@ -6278,14 +6643,16 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Guetig": {
-      "domain": "Education",
+      "domain": "Other",
+      "subfield": "Education",
       "topics": [
         "Mathematics Education and Teaching Techniques",
         "Creativity in Education and Neuroscience"
       ]
     },
     "Robert Harris": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neurotransmitter Receptor Influence on Behavior",
@@ -6293,7 +6660,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Haslinger": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Biophysics & Physics",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Physics of Superconductivity and Magnetism",
@@ -6301,7 +6669,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Jacobs": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural Networks and Applications",
@@ -6309,7 +6678,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Legenstein": {
-      "domain": "Electrical and Electronic Engineering",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Electrical and Electronic Engineering",
       "topics": [
         "Advanced Memory and Neural Computing",
         "Neural dynamics and brain function",
@@ -6317,7 +6687,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Malinow": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurotransmitter Receptor Influence on Behavior",
         "Neuroscience and Neuropharmacology Research",
@@ -6325,7 +6696,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robert Shapley": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -6333,7 +6705,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Robyn Miller": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Neural dynamics and brain function",
@@ -6341,7 +6714,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roderick Jensen": {
-      "domain": "Pulmonary and Respiratory Medicine",
+      "domain": "Clinical & Disease",
+      "subfield": "Pulmonary and Respiratory Medicine",
       "topics": [
         "Occupational and environmental lung diseases",
         "Quantum chaos and dynamical systems",
@@ -6349,7 +6723,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rodney Douglas": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6357,7 +6732,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rodolfo R Llinas": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -6365,7 +6741,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roger Traub": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -6373,7 +6750,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roland Bosch": {
-      "domain": "Electrical and Electronic Engineering",
+      "domain": "Systems & Circuits",
+      "subfield": "Electrical and Electronic Engineering",
       "topics": [
         "Radio Frequency Integrated Circuit Design",
         "Semiconductor Quantum Structures and Devices",
@@ -6381,7 +6759,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roland Koberle": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -6389,7 +6768,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ron Paz": {
-      "domain": "Pharmacology",
+      "domain": "Other",
+      "subfield": "Pharmacology",
       "topics": [
         "Cannabis and Cannabinoid Research",
         "Homelessness and Social Issues",
@@ -6397,7 +6777,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ronald L Calabrese": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -6405,7 +6786,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Rony Azouz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -6413,7 +6795,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roozbeh Kiani": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -6421,7 +6804,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ross Snider": {
-      "domain": "Hardware and Architecture",
+      "domain": "Other",
+      "subfield": "Hardware and Architecture",
       "topics": [
         "Embedded Systems Design Techniques",
         "Neural dynamics and brain function",
@@ -6429,7 +6813,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roy Harpaz": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Animal Behavior and Reproduction",
@@ -6437,7 +6822,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Roy Smeal": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Other",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neuroscience and Neural Engineering",
@@ -6445,7 +6831,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ruben Portugues": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Neural dynamics and brain function",
@@ -6453,7 +6840,8 @@ const MCN_DOMAINS = {
       ]
     },
     "S Shushruth": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -6461,7 +6849,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sachiko Tsuda": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Zebrafish Biomedical Research Applications",
         "Photoreceptor and optogenetics research",
@@ -6469,7 +6858,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sam Lewallen": {
-      "domain": "Geometry and Topology",
+      "domain": "Other",
+      "subfield": "Geometry and Topology",
       "topics": [
         "Geometric and Algebraic Topology",
         "Neural dynamics and brain function",
@@ -6477,7 +6867,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sam Sober": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Animal Behavior and Reproduction",
         "Marine animal studies overview",
@@ -6485,7 +6876,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Samat Moldakarimov": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6493,7 +6885,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sami El Boustani": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Photoreceptor and optogenetics research",
@@ -6501,7 +6894,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Santanu Chakraborty": {
-      "domain": "Atomic and Molecular Physics, and Optics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Atomic and Molecular Physics, and Optics",
       "topics": [
         "Spectroscopy and Quantum Chemical Studies",
         "Congenital heart defects research",
@@ -6509,7 +6903,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sara A. Solla": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -6517,7 +6912,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sara Solla": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -6525,7 +6921,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sarah Jarvis": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -6533,7 +6930,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sari Andoni": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Vocal Communication and Behavior",
@@ -6541,7 +6939,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sashi Marella": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Nonlinear Dynamics and Pattern Formation",
@@ -6549,7 +6948,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sazzad Nasir": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Tactile and Sensory Interactions",
         "Motor Control and Adaptation",
@@ -6557,7 +6957,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Scott Linderman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Gaussian Processes and Bayesian Inference",
@@ -6565,7 +6966,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Scott Sternson": {
-      "domain": "Endocrine and Autonomic Systems",
+      "domain": "Other",
+      "subfield": "Endocrine and Autonomic Systems",
       "topics": [
         "Regulation of Appetite and Obesity",
         "Neural dynamics and brain function",
@@ -6573,7 +6975,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sean Marrett": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Other",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Advanced MRI Techniques and Applications",
         "Functional Brain Connectivity Studies",
@@ -6581,7 +6984,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sean Slee": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Hearing Loss and Rehabilitation",
         "Neural dynamics and brain function",
@@ -6589,7 +6993,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sean Trettel": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -6597,7 +7002,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sebastian Brandt": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Sensory & Perception",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Advanced Vision and Imaging",
         "Medical Image Segmentation Techniques",
@@ -6605,7 +7011,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sen Cheng": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -6613,7 +7020,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Shan Jiang": {
-      "domain": "Biomedical Engineering",
+      "domain": "Other",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Soft Robotics and Applications",
         "Advanced Radiotherapy Techniques",
@@ -6621,7 +7029,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Shao Ying Hua": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Ion channel regulation and function",
@@ -6629,7 +7038,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sharon Crook": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Cell Image Analysis Techniques",
@@ -6637,7 +7047,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sharon Peled": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Other",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Advanced MRI Techniques and Applications",
         "Advanced Neuroimaging Techniques and Applications",
@@ -6645,7 +7056,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sheila Nirenberg": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -6653,7 +7065,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Shihab Shamma": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -6661,7 +7074,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Shirin Hadizadeh": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Protein Structure and Dynamics",
         "Enzyme Structure and Function",
@@ -6669,7 +7083,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Shiva Sinha": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Bat Biology and Ecology Studies",
         "Marine animal studies overview",
@@ -6677,7 +7092,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Simon Barry Laughlin": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -6685,7 +7101,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Simon Sponberg": {
-      "domain": "Aerospace Engineering",
+      "domain": "Other",
+      "subfield": "Aerospace Engineering",
       "topics": [
         "Biomimetic flight and propulsion mechanisms",
         "Neurobiology and Insect Physiology Research",
@@ -6693,7 +7110,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sindhu Anand": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neural Engineering",
         "EEG and Brain-Computer Interfaces",
@@ -6701,7 +7119,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Singh Amrita": {
-      "domain": "Physiology",
+      "domain": "Sensory & Perception",
+      "subfield": "Physiology",
       "topics": [
         "Pain Mechanisms and Treatments",
         "Neural dynamics and brain function",
@@ -6709,7 +7128,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sisi Ma": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurotransmitter Receptor Influence on Behavior",
         "Neural dynamics and brain function",
@@ -6717,7 +7137,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Songhai Shi": {
-      "domain": "Developmental Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Developmental Neuroscience",
       "topics": [
         "Neurogenesis and neuroplasticity mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -6725,7 +7146,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sophie Deneve": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6733,7 +7155,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sophie Dumont": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Microtubule and mitosis dynamics",
         "Cellular Mechanics and Interactions",
@@ -6741,7 +7164,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sridhar Raghavachari": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -6749,7 +7173,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Srikantan Nagarajan": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Neural dynamics and brain function",
@@ -6757,7 +7182,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Srinivas Turaga": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Cell Image Analysis Techniques",
@@ -6765,7 +7191,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Srivatsun Sadagopan": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Music Perception",
@@ -6773,7 +7200,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stacia Friedman-Hill": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural and Behavioral Psychology Studies",
@@ -6781,7 +7209,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stefano Fusi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Advanced Memory and Neural Computing",
@@ -6789,7 +7218,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephani Otte": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -6797,7 +7227,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephanie Palmer": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -6805,7 +7236,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephen A. Baccus": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -6813,7 +7245,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephen Baccus": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -6821,7 +7254,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephen Cowen": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -6829,7 +7263,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephen Fisher": {
-      "domain": "Political Science and International Relations",
+      "domain": "Other",
+      "subfield": "Political Science and International Relations",
       "topics": [
         "Electoral Systems and Political Participation",
         "Holomorphic and Operator Theory",
@@ -6837,7 +7272,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephen Kosslyn": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Spatial Cognition and Navigation",
@@ -6845,7 +7281,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stephen Lisberger": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -6853,7 +7290,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Steve Kunec": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -6861,7 +7299,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Steven Epstein": {
-      "domain": "Small Animals",
+      "domain": "Other",
+      "subfield": "Small Animals",
       "topics": [
         "Veterinary Medicine and Surgery",
         "Renal function and acid-base balance",
@@ -6869,7 +7308,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Steven Nowlan": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Neural Networks and Applications",
         "Neural dynamics and brain function",
@@ -6877,7 +7317,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Steven Prescott": {
-      "domain": "Physiology",
+      "domain": "Sensory & Perception",
+      "subfield": "Physiology",
       "topics": [
         "Pain Mechanisms and Treatments",
         "Neural dynamics and brain function",
@@ -6885,7 +7326,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Steven Zucker": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Computer Graphics and Visualization Techniques",
@@ -6893,7 +7335,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Stéphane Deny": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -6901,7 +7344,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Subbakrishna Shankar": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Memory and Neural Mechanisms",
@@ -6909,7 +7353,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sueyeon Chung": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -6917,7 +7362,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Surya Ganguli": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Machine Learning & AI",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural Networks and Applications",
@@ -6925,7 +7371,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Susanne Schreiber": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -6933,7 +7380,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Susanne Still": {
-      "domain": "Statistical and Nonlinear Physics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Statistical and Nonlinear Physics",
       "topics": [
         "Advanced Thermodynamics and Statistical Mechanics",
         "Neural dynamics and brain function",
@@ -6941,7 +7389,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Sylvia Guillory": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Clinical & Disease",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Autism Spectrum Disorder Research",
         "Neural and Behavioral Psychology Studies",
@@ -6949,7 +7398,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Taffeta Elliott": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Animal Behavior and Reproduction",
@@ -6957,7 +7407,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tara Gaertner": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Protein Structure and Dynamics",
         "Protein Kinase Regulation and GTPase Signaling",
@@ -6965,7 +7416,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tatyana Sharpee": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -6973,7 +7425,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Terrence J Sejnowski": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -6981,7 +7434,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Terrence Kovacs": {
-      "domain": "Surgery",
+      "domain": "Other",
+      "subfield": "Surgery",
       "topics": [
         "Helicobacter pylori-related gastroenterology studies",
         "Gastroesophageal reflux and treatments",
@@ -6989,7 +7443,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Theoden Netoff": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -6997,7 +7452,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Adelman": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Animal Behavior and Reproduction",
@@ -7005,7 +7461,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Albright": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -7013,7 +7470,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Anastasio": {
-      "domain": "Neurology",
+      "domain": "Sensory & Perception",
+      "subfield": "Neurology",
       "topics": [
         "Vestibular and auditory disorders",
         "Visual perception and processing mechanisms",
@@ -7021,7 +7479,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Berger": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -7029,7 +7488,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Chartrand": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Single-cell and spatial transcriptomics",
@@ -7037,7 +7497,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Collett": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Insect and Arachnid Ecology and Behavior",
@@ -7045,7 +7506,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Euler": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -7053,7 +7515,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Gregor": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Genomics and Chromatin Dynamics",
@@ -7061,7 +7524,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Lauritzen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -7069,7 +7533,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Oertner": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Photoreceptor and optogenetics research",
         "Neuroscience and Neuropharmacology Research",
@@ -7077,7 +7542,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thomas Reardon": {
-      "domain": "General Agricultural and Biological Sciences",
+      "domain": "Other",
+      "subfield": "General Agricultural and Biological Sciences",
       "topics": [
         "Agricultural Innovations and Practices",
         "Innovation and Socioeconomic Development",
@@ -7085,7 +7551,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Thorsteinn Rognvaldsson": {
-      "domain": "Control and Systems Engineering",
+      "domain": "Other",
+      "subfield": "Control and Systems Engineering",
       "topics": [
         "Fault Detection and Control Systems",
         "Neural Networks and Applications",
@@ -7093,7 +7560,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tilman Kispersky": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -7101,7 +7569,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tim Gollisch": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Retinal Development and Disorders",
@@ -7109,7 +7578,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tim Lewis": {
-      "domain": "Literature and Literary Theory",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Literature and Literary Theory",
       "topics": [
         "Second Language Learning and Teaching",
         "EFL/ESL Teaching and Learning",
@@ -7117,7 +7587,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Timothy Marzullo": {
-      "domain": "Genetics",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Genetics",
       "topics": [
         "Insect and Arachnid Ecology and Behavior",
         "Neuroscience and Neural Engineering",
@@ -7125,7 +7596,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Toby Velte": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neural Engineering",
         "Retinal Development and Disorders",
@@ -7133,7 +7605,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tommy Blanchard": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Neural dynamics and brain function",
@@ -7141,7 +7614,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tony Bell": {
-      "domain": "Statistics, Probability and Uncertainty",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Statistics, Probability and Uncertainty",
       "topics": [
         "Risk and Safety Analysis",
         "CO2 Sequestration and Geologic Interactions",
@@ -7149,7 +7623,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Trevor Darrell": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Machine Learning & AI",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Multimodal Machine Learning Applications",
         "Domain Adaptation and Few-Shot Learning",
@@ -7157,7 +7632,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Tugce Tasci": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Computer Graphics and Visualization Techniques",
@@ -7165,7 +7641,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ueli Rutishauser": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -7173,7 +7650,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ulrich Egert": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neural Engineering",
@@ -7181,7 +7659,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Upinder Bhalla": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -7189,7 +7668,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Uri Alon": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Bacterial Genetics and Biotechnology",
@@ -7197,7 +7677,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Uri Eden": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -7205,7 +7686,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Uri Livneh": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -7213,7 +7695,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Uri Werner-Reiss": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -7221,7 +7704,8 @@ const MCN_DOMAINS = {
       ]
     },
     "V S Ramachandran": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Multisensory perception and integration",
@@ -7229,7 +7713,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Vahid Shahrezaei": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Single-cell and spatial transcriptomics",
@@ -7237,7 +7722,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Valentin Dragoi": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -7245,7 +7731,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Valeriy Nenov": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Functional Brain Connectivity Studies",
         "Traumatic Brain Injury and Neurovascular Disturbances",
@@ -7253,7 +7740,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Valeriya Gritsenko": {
-      "domain": "Biomedical Engineering",
+      "domain": "Motor & Action",
+      "subfield": "Biomedical Engineering",
       "topics": [
         "Muscle activation and electromyography studies",
         "Motor Control and Adaptation",
@@ -7261,7 +7749,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Venkatesh Murthy": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Neurobiology and Insect Physiology Research",
@@ -7269,7 +7758,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Victor Luria": {
-      "domain": "Developmental Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Developmental Neuroscience",
       "topics": [
         "Neurogenesis and neuroplasticity mechanisms",
         "Developmental Biology and Gene Regulation",
@@ -7277,7 +7767,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Victoria Booth": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Sleep and Wakefulness Research",
@@ -7285,7 +7776,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Vijay Singh": {
-      "domain": "Water Science and Technology",
+      "domain": "Other",
+      "subfield": "Water Science and Technology",
       "topics": [
         "Hydrology and Watershed Management Studies",
         "Hydrology and Drought Analysis",
@@ -7293,7 +7785,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Virginia De Sa": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -7301,7 +7794,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Viviana Gradinaru": {
-      "domain": "Genetics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Genetics",
       "topics": [
         "Virus-based gene therapy research",
         "Photoreceptor and optogenetics research",
@@ -7309,7 +7803,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Vladimir Kefalov": {
-      "domain": "Molecular Biology",
+      "domain": "Sensory & Perception",
+      "subfield": "Molecular Biology",
       "topics": [
         "Retinal Development and Disorders",
         "Photoreceptor and optogenetics research",
@@ -7317,7 +7812,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Vladimir Voevodsky": {
-      "domain": "Mathematical Physics",
+      "domain": "Other",
+      "subfield": "Mathematical Physics",
       "topics": [
         "Homotopy and Cohomology in Algebraic Topology",
         "Algebraic structures and combinatorial models",
@@ -7325,7 +7821,8 @@ const MCN_DOMAINS = {
       ]
     },
     "W William Mehaffey": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Ion channel regulation and function",
         "Neuroscience and Neuropharmacology Research",
@@ -7333,7 +7830,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Walter Schneider": {
-      "domain": "Radiology, Nuclear Medicine and Imaging",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Radiology, Nuclear Medicine and Imaging",
       "topics": [
         "Advanced Neuroimaging Techniques and Applications",
         "Advanced MRI Techniques and Applications",
@@ -7341,7 +7839,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wei Huayi": {
-      "domain": "Computational Mechanics",
+      "domain": "Computational & Theoretical",
+      "subfield": "Computational Mechanics",
       "topics": [
         "Advanced Numerical Methods in Computational Mathematics",
         "Numerical methods in engineering",
@@ -7349,7 +7848,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wendy Huang": {
-      "domain": "Computer Science Applications",
+      "domain": "Other",
+      "subfield": "Computer Science Applications",
       "topics": [
         "Teaching and Learning Programming",
         "Educational Games and Gamification",
@@ -7357,7 +7857,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Whee Ky Ma": {
-      "domain": "Geometry and Topology",
+      "domain": "Other",
+      "subfield": "Geometry and Topology",
       "topics": [
         "Algebraic structures and combinatorial models",
         "Homotopy and Cohomology in Algebraic Topology",
@@ -7365,7 +7866,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wieland Brendel": {
-      "domain": "Artificial Intelligence",
+      "domain": "Machine Learning & AI",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Adversarial Robustness in Machine Learning",
         "Domain Adaptation and Few-Shot Learning",
@@ -7373,7 +7875,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Bialek": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Gene Regulatory Network Analysis",
@@ -7381,7 +7884,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Frost": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neurobiology and Insect Physiology Research",
         "Neural dynamics and brain function",
@@ -7389,7 +7893,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Kath": {
-      "domain": "Electrical and Electronic Engineering",
+      "domain": "Systems & Circuits",
+      "subfield": "Electrical and Electronic Engineering",
       "topics": [
         "Optical Network Technologies",
         "Advanced Fiber Laser Technologies",
@@ -7397,7 +7902,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Miller": {
-      "domain": "Atomic and Molecular Physics, and Optics",
+      "domain": "Biophysics & Physics",
+      "subfield": "Atomic and Molecular Physics, and Optics",
       "topics": [
         "Advanced Chemical Physics Studies",
         "Spectroscopy and Quantum Chemical Studies",
@@ -7405,7 +7911,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Rose": {
-      "domain": "Geophysics",
+      "domain": "Other",
+      "subfield": "Geophysics",
       "topics": [
         "Geological and Geochemical Analysis",
         "Geochemistry and Geologic Mapping",
@@ -7413,7 +7920,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Skaggs": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -7421,7 +7929,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Spain": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neuroscience and Neuropharmacology Research",
@@ -7429,7 +7938,8 @@ const MCN_DOMAINS = {
       ]
     },
     "William Vinje": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Visual perception and processing mechanisms",
         "Neural dynamics and brain function",
@@ -7437,7 +7947,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Winfried Denk": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Advanced Fluorescence Microscopy Techniques",
         "Neuroscience and Neuropharmacology Research",
@@ -7445,7 +7956,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Winrich Freiwald": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Face Recognition and Perception",
         "Neural dynamics and brain function",
@@ -7453,7 +7965,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wolfram Schultz": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural and Behavioral Psychology Studies",
         "Neurotransmitter Receptor Influence on Behavior",
@@ -7461,7 +7974,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wonryull Koh": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Gene Regulatory Network Analysis",
         "Cell Image Analysis Techniques",
@@ -7469,7 +7983,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wouter Jan Rappel": {
-      "domain": "Cell Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Cell Biology",
       "topics": [
         "Cellular Mechanics and Interactions",
         "Cardiac electrophysiology and arrhythmias",
@@ -7477,7 +7992,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Wu-Jung Lee": {
-      "domain": "Oceanography",
+      "domain": "Other",
+      "subfield": "Oceanography",
       "topics": [
         "Underwater Acoustics Research",
         "Marine animal studies overview",
@@ -7485,7 +8001,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Xiao Jing Wang": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -7493,7 +8010,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Xiao-jing Wang": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -7501,7 +8019,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Xiaoying Huang": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Photoreceptor and optogenetics research",
@@ -7509,7 +8028,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Xinxin Ge": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Other",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Functional Brain Connectivity Studies",
@@ -7517,7 +8037,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yael Katz": {
-      "domain": "Cellular and Molecular Neuroscience",
+      "domain": "Other",
+      "subfield": "Cellular and Molecular Neuroscience",
       "topics": [
         "Neuroscience and Neuropharmacology Research",
         "Neural dynamics and brain function",
@@ -7525,7 +8046,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yael Niv": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Neural and Behavioral Psychology Studies",
@@ -7533,7 +8055,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yair Manor": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Computational & Theoretical",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "stochastic dynamics and bifurcation",
@@ -7541,7 +8064,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yang Dan": {
-      "domain": "Computer Vision and Pattern Recognition",
+      "domain": "Other",
+      "subfield": "Computer Vision and Pattern Recognition",
       "topics": [
         "Face and Expression Recognition",
         "Advanced Image and Video Retrieval Techniques",
@@ -7549,7 +8073,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yanyan Zhang": {
-      "domain": "Instrumentation",
+      "domain": "Biophysics & Physics",
+      "subfield": "Instrumentation",
       "topics": [
         "Astronomy and Astrophysical Research",
         "Stellar, planetary, and galactic studies",
@@ -7557,7 +8082,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yarden Cohen": {
-      "domain": "Developmental Biology",
+      "domain": "Motor & Action",
+      "subfield": "Developmental Biology",
       "topics": [
         "Animal Vocal Communication and Behavior",
         "Neural dynamics and brain function",
@@ -7565,7 +8091,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yi Xiong Zhou": {
-      "domain": "Immunology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Immunology",
       "topics": [
         "Immune cells in cancer",
         "Neutrophil, Myeloperoxidase and Oxidative Mechanisms",
@@ -7573,7 +8100,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yi Zhou": {
-      "domain": "Molecular Biology",
+      "domain": "Cellular & Molecular",
+      "subfield": "Molecular Biology",
       "topics": [
         "Protein Structure and Dynamics",
         "RNA and protein synthesis mechanisms",
@@ -7581,7 +8109,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yi-Ju Chen": {
-      "domain": "Rheumatology",
+      "domain": "Clinical & Disease",
+      "subfield": "Rheumatology",
       "topics": [
         "Rheumatoid Arthritis Research and Therapies",
         "Systemic Lupus Erythematosus Research",
@@ -7589,7 +8118,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yifat Prut": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Motor & Action",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Motor Control and Adaptation",
@@ -7597,7 +8127,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yilun Zhang": {
-      "domain": "Instrumentation",
+      "domain": "Biophysics & Physics",
+      "subfield": "Instrumentation",
       "topics": [
         "Astronomy and Astrophysical Research",
         "Stellar, planetary, and galactic studies",
@@ -7605,7 +8136,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yinan Wan": {
-      "domain": "Biophysics",
+      "domain": "Cellular & Molecular",
+      "subfield": "Biophysics",
       "topics": [
         "Cell Image Analysis Techniques",
         "Advanced Fluorescence Microscopy Techniques",
@@ -7613,7 +8145,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Ying Zhang": {
-      "domain": "Signal Processing",
+      "domain": "Other",
+      "subfield": "Signal Processing",
       "topics": [
         "Data Management and Algorithms",
         "Complex Network Analysis Techniques",
@@ -7621,7 +8154,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yixin Guo": {
-      "domain": "Artificial Intelligence",
+      "domain": "Other",
+      "subfield": "Artificial Intelligence",
       "topics": [
         "Domain Adaptation and Few-Shot Learning",
         "Radiomics and Machine Learning in Medical Imaging",
@@ -7629,7 +8163,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yoav Kfir": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Methods, Stats & Imaging",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "EEG and Brain-Computer Interfaces",
@@ -7637,7 +8172,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yoram Ben Shaul": {
-      "domain": "Sensory Systems",
+      "domain": "Sensory & Perception",
+      "subfield": "Sensory Systems",
       "topics": [
         "Olfactory and Sensory Function Studies",
         "Neurobiology and Insect Physiology Research",
@@ -7645,7 +8181,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yoram Burak": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Memory and Neural Mechanisms",
@@ -7653,7 +8190,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yoram Gutfreund": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Visual perception and processing mechanisms",
@@ -7661,7 +8199,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yossi Yovel": {
-      "domain": "Ecology, Evolution, Behavior and Systematics",
+      "domain": "Other",
+      "subfield": "Ecology, Evolution, Behavior and Systematics",
       "topics": [
         "Bat Biology and Ecology Studies",
         "Marine animal studies overview",
@@ -7669,7 +8208,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Youngmin Park": {
-      "domain": "Information Systems",
+      "domain": "Other",
+      "subfield": "Information Systems",
       "topics": [
         "Educational Systems and Policies",
         "Educational Research and Pedagogy",
@@ -7677,7 +8217,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yu Hu": {
-      "domain": "Computer Networks and Communications",
+      "domain": "Systems & Circuits",
+      "subfield": "Computer Networks and Communications",
       "topics": [
         "Interconnection Networks and Systems",
         "Embedded Systems Design Techniques",
@@ -7685,7 +8226,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Yuri Dabaghian": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neuroscience and Neuropharmacology Research",
@@ -7693,7 +8235,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Zachary Mainen": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Sensory & Perception",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Neural dynamics and brain function",
         "Olfactory and Sensory Function Studies",
@@ -7701,7 +8244,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Zaneta Navratilova": {
-      "domain": "Cognitive Neuroscience",
+      "domain": "Cognitive & Behavioral",
+      "subfield": "Cognitive Neuroscience",
       "topics": [
         "Memory and Neural Mechanisms",
         "Neural dynamics and brain function",
@@ -7709,7 +8253,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Zheng Liu": {
-      "domain": "Control and Systems Engineering",
+      "domain": "Other",
+      "subfield": "Control and Systems Engineering",
       "topics": [
         "Machine Fault Diagnosis Techniques",
         "Non-Destructive Testing Techniques",
@@ -7717,7 +8262,8 @@ const MCN_DOMAINS = {
       ]
     },
     "Zhongshu Yang": {
-      "domain": "Developmental Neuroscience",
+      "domain": "Cellular & Molecular",
+      "subfield": "Developmental Neuroscience",
       "topics": [
         "Neurogenesis and neuroplasticity mechanisms",
         "Fluid Dynamics and Mixing",

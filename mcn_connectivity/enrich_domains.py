@@ -35,6 +35,62 @@ import enrich_collabs as ec
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 HOW_MANY_TOPICS = 3  # top-N topics kept per person for the detail panel
+CLASSIFY_TOPICS = 6  # top-N topics scanned when assigning a domain bucket
+
+# OpenAlex tags a huge share of neuro people with these generic "filler" topics
+# as #1, so they carry no discriminating signal. We skip them and classify on
+# the first *specific* topic; someone whose whole profile is only these is, by
+# definition, a core dynamics/theory person -> "Computational & Theoretical".
+GENERIC_TOPICS = {
+    "neural dynamics and brain function",
+    "neuroscience and neuropharmacology research",
+    "neuroscience and neural engineering",
+}
+GENERIC_FALLBACK = "Computational & Theoretical"
+
+# Curated research-domain buckets for a computational-neuroscience cohort.
+# OpenAlex files ~half of everyone under the single subfield "Cognitive
+# Neuroscience", so we classify on the person's granular *topics* (which are
+# diverse) instead of that catch-all subfield. Rules are matched top-to-bottom
+# against the combined text of a person's top topics + subfield + field; the
+# first bucket whose keywords hit wins. Order = specific before general.
+BUCKET_RULES = [
+    # Matched against the first *specific* (non-generic) topic's name + field.
+    ("Machine Learning & AI", [
+        "artificial intelligence", "neural network", "deep learning",
+        "machine learning", "computer vision", "pattern recognition",
+        "reinforcement learning", "natural language", "generative"]),
+    ("Computational & Theoretical", [
+        "nonlinear dynamics", "pattern formation", "dynamical", "oscillat",
+        "computational", "information theory", "network model", "attractor",
+        "mean field", "stochastic", "chaos", "mathematical model", "bayesian"]),
+    ("Sensory & Perception", [
+        "visual", "vision", "retina", "photoreceptor", "auditory", "hearing",
+        "olfact", "somatosensory", "perception", "sensory", "pain "]),
+    ("Motor & Action", [
+        "motor", "movement", "locomotion", "reaching", "muscle", "spinal",
+        "oculomotor", "sensorimotor", "vocal", "song"]),
+    ("Cognitive & Behavioral", [
+        "decision", "memory", "attention", "reward", "cognitive", "behavior",
+        "hippocamp", "prefrontal", "emotion", "psychology", "language",
+        "navigation", "sleep", "consciousness"]),
+    ("Cellular & Molecular", [
+        "synap", "ion channel", "molecular", "receptor", "neurotransmitter",
+        "gene", "protein", "dendrit", "excitability", "cell", "insect",
+        "biochemistry", "development", "stem cell", "glia"]),
+    ("Systems & Circuits", [
+        "connectom", "microcircuit", "neural circuit", "cortical circuit",
+        "circuit", "cortical column", "electrophysiolog", "network"]),
+    ("Biophysics & Physics", [
+        "biophysic", "physics", "quantum", "statistical mechanics", "fluid",
+        "optics", "condensed matter", "photon"]),
+    ("Methods, Stats & Imaging", [
+        "imaging", "fmri", "eeg", "meg", "signal processing", "statistic",
+        "microscopy", "brain-computer", "tomography", "spectroscopy"]),
+    ("Clinical & Disease", [
+        "disease", "clinical", "disorder", "neurology", "psychiatr", "epilep",
+        "parkinson", "alzheimer", "stroke", "tumor", "cancer", "pharmacolog", "therap"]),
+]
 
 
 def fetch_topics(openalex_id, refresh):
@@ -48,17 +104,37 @@ def fetch_topics(openalex_id, refresh):
     return data.get("topics") or []
 
 
-def primary_domain_and_topics(topics):
-    """(primary subfield, [top topic display names]) from a topics list.
+def classify(topics):
+    """Assign a person to a curated domain bucket from their OpenAlex topics.
 
-    Topics arrive sorted by ``count`` (descending), so topics[0] is dominant.
-    Returns (None, []) when the author has no classified topics.
+    Topics arrive sorted by ``count`` (descending). Returns
+    (bucket, primary_subfield, [top topic display names]); bucket is None when
+    the author has no topics, "Other" when nothing matches a rule.
     """
     if not topics:
-        return None, []
+        return None, None, []
+
     subfield = ((topics[0].get("subfield") or {}).get("display_name")) or None
     names = [t.get("display_name") for t in topics[:HOW_MANY_TOPICS] if t.get("display_name")]
-    return subfield, names
+
+    # Pick the first topic that isn't generic filler; classify on its name+field.
+    chosen = None
+    for t in topics[:CLASSIFY_TOPICS]:
+        dn = (t.get("display_name") or "").strip()
+        if dn and dn.lower() not in GENERIC_TOPICS:
+            chosen = t
+            break
+    if chosen is None:
+        return GENERIC_FALLBACK, subfield, names  # profile is entirely generic dynamics
+
+    text = ((chosen.get("display_name") or "") + " "
+            + (chosen.get("field") or {}).get("display_name", "")).lower()
+    bucket = "Other"
+    for name, keywords in BUCKET_RULES:
+        if any(kw in text for kw in keywords):
+            bucket = name
+            break
+    return bucket, subfield, names
 
 
 def write_domains_js(subfield_counts, by_person, out_path):
@@ -98,7 +174,7 @@ def main():
     print(f"Fetching topics for {len(resolved)} resolved people "
           f"(single-record GETs are free) ...", file=sys.stderr)
 
-    subfield_counts = {}
+    bucket_counts = {}
     by_person = {}
     no_topics = 0
     for i, (name, info) in enumerate(sorted(resolved.items()), 1):
@@ -106,24 +182,24 @@ def main():
         if not oid:
             continue
         topics = fetch_topics(oid, args.refresh)
-        domain, top_names = primary_domain_and_topics(topics)
-        by_person[name] = {"domain": domain, "topics": top_names}
-        if domain:
-            subfield_counts[domain] = subfield_counts.get(domain, 0) + 1
+        bucket, subfield, top_names = classify(topics)
+        by_person[name] = {"domain": bucket, "subfield": subfield, "topics": top_names}
+        if bucket:
+            bucket_counts[bucket] = bucket_counts.get(bucket, 0) + 1
         else:
             no_topics += 1
         if i % 100 == 0:
             print(f"  [{i}/{len(resolved)}] ...", file=sys.stderr)
 
-    write_domains_js(subfield_counts, by_person, os.path.join(HERE, "domains.js"))
+    write_domains_js(bucket_counts, by_person, os.path.join(HERE, "domains.js"))
 
     print(f"\nDone.\n"
           f"  People labeled:   {len(by_person)}\n"
-          f"  Distinct domains: {len(subfield_counts)}\n"
+          f"  Domain buckets:   {len(bucket_counts)}\n"
           f"  No topic data:    {no_topics}\n"
           f"  Output:           domains.js", file=sys.stderr)
-    top = sorted(subfield_counts.items(), key=lambda kv: -kv[1])[:12]
-    print("  Top domains: " + ", ".join(f"{n} ({c})" for n, c in top), file=sys.stderr)
+    top = sorted(bucket_counts.items(), key=lambda kv: -kv[1])
+    print("  Distribution: " + ", ".join(f"{n} ({c})" for n, c in top), file=sys.stderr)
 
 
 if __name__ == "__main__":

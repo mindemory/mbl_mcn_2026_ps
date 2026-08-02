@@ -22,7 +22,7 @@ python3 -m http.server 8787
 ## Features
 
 - **Connections** — toggle between **Co-attendance**, **Co-authorship**, or **Both** edge layers
-- **Color by year / role / domain / connections** — including by **research domain** (OpenAlex subfield)
+- **Color by year / role / domain / connections** — including by **research domain** (curated field buckets)
 - **Year / Role / Domain filters** — isolate a cohort, a role, or a research area
 - **Force / Radial / Domains layout** — physics, ring-by-year, or clustered-by-research-domain
 - **Search** — highlight by name or affiliation (searches career data too)
@@ -72,11 +72,13 @@ Outputs:
 
 ### 3. Research domains — `enrich_domains.py`
 
-Labels each resolved person with their research domain (their top OpenAlex topic's **subfield**, e.g. *Cognitive Neuroscience*, *Artificial Intelligence*), writing `domains.js`. This powers the Domain color mode, the Domain filter, and the Domains layout.
+Labels each resolved person with a **research-domain bucket** (Computational & Theoretical, Machine Learning & AI, Sensory & Perception, Cellular & Molecular, Cognitive & Behavioral, Motor & Action, Systems & Circuits, Biophysics & Physics, Methods/Stats/Imaging, Clinical & Disease), writing `domains.js`. This powers the Domain color mode, the Domain filter, and the Domains layout.
 
 ```bash
 python3 enrich_domains.py            # reads resolved_authors.json, writes domains.js
 ```
+
+Buckets are assigned from each person's OpenAlex `topics`. OpenAlex tags ~half of all neuro people with the same generic top topic ("Neural dynamics and brain function"), so the classifier **skips that filler and keys off the first specific topic** (see `BUCKET_RULES` / `GENERIC_TOPICS` in `enrich_domains.py`); people who are *only* generic dynamics fall to "Computational & Theoretical". Tune `BUCKET_RULES` to taste.
 
 **Free:** it fetches author records by id, and single-record lookups cost 0 OpenAlex credits (only searches/filtered lists are billed). Run it any time after `enrich_collabs.py`.
 
