@@ -96,12 +96,32 @@ OpenAlex bills **10 credits per search** (`/authors?search=`) but only **1 credi
 - Co-authorship: [OpenAlex](https://openalex.org) works, with Semantic Scholar / ORCID crosscheck
 - Career info: manually curated from public lab pages / ORCID (see `data.js`)
 
+## Deploying to a website
+
+The app is fully static, so deploying is just copying the runtime files. `build_site.sh` assembles a clean, **self-contained** bundle in `dist/` — it vendors D3 and the web fonts locally (no external CDN calls), minifies the data files, injects a `<base>` tag, and copies **only** the 6 runtime files (never `.env`, scripts, caches, or config).
+
+```bash
+./build_site.sh                     # -> dist/  (safe, no secrets)
+```
+
+It's currently deployed to **https://www.alexandriasocial.net/mcn-network** (a Next.js app on Vercel). To publish an update there:
+
+```bash
+./build_site.sh
+rsync -a --delete dist/ /Users/mrugankdake/Documents/Personal/alexandria/public/mcn-network/
+cd /Users/mrugankdake/Documents/Personal/alexandria
+git add public/mcn-network && git commit -m "Update MCN network" && git push   # Vercel auto-deploys
+```
+
+Notes for that Next.js host: files under `public/mcn-network/` serve at `/mcn-network/`, and a small `rewrites()` entry in `next.config.ts` maps the clean URL `/mcn-network` to the static `index.html`. To deploy under a different path, set `MCN_BASE_PATH=/your-path/ ./build_site.sh`. For any plain static host, just drop `dist/` in place — no config needed.
+
 ## Roadmap
 
 - [x] Scrape all years (1988–2017) from MBL archive
 - [x] Add OpenAlex co-authorship edges
+- [x] Research-domain layer (color / filter / cluster)
+- [x] Live deploy (alexandriasocial.net/mcn-network)
 - [ ] Add 2026 cohort (after course ends)
-- [ ] GitHub Pages deploy for community access
 - [ ] Cross-link to Neurotree for academic genealogy
 
 ## File structure
@@ -120,6 +140,7 @@ mcn_connectivity/
 ├── enrich_domains.py     # Research-domain labeler (free)
 ├── name_aliases.json     # Spelling-variant → canonical name map (manual)
 ├── author_overrides.json # Pin/skip scholarly identities (manual)
+├── build_site.sh         # Bundle a self-contained dist/ for deployment
 └── README.md
 ```
 

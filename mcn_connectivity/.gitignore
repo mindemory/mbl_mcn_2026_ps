@@ -11,3 +11,6 @@ resolved_authors.json
 
 # Debug run logs
 *.log
+
+# Built static bundle (regenerate with build_site.sh)
+dist/
