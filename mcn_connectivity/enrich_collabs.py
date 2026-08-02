@@ -509,7 +509,11 @@ def build_edges(resolved, refresh):
                 work["id"], {"year": work["year"], "title": work["title"], "names": set()})
             entry["names"].update(names)
 
-    # Turn shared works into weighted pairwise edges.
+    # Turn shared works into weighted pairwise edges. Sample titles are capped
+    # (not every paper is kept) to bound collabs.js's size — most pairs have
+    # only a handful of shared papers anyway; prolific pairs just show their
+    # first MAX_SAMPLE_TITLES alongside the true total `papers` count.
+    MAX_SAMPLE_TITLES = 8
     edges = {}
     for work in work_members.values():
         names = sorted(work["names"])
@@ -520,8 +524,8 @@ def build_edges(resolved, refresh):
                 edge["papers"] += 1
                 if work["year"]:
                     edge["years"].add(work["year"])
-                if work["title"] and len(edge["titles"]) < 3:
-                    edge["titles"].append(work["title"])
+                if work["title"] and len(edge["titles"]) < MAX_SAMPLE_TITLES:
+                    edge["titles"].append({"title": work["title"], "year": work["year"]})
 
     result = [{
         "source": a, "target": b,

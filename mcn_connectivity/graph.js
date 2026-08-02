@@ -677,11 +677,43 @@
       }
       collaborators.sort((a, b) => b.papers - a.papers);
     }
-    const collabList = collaborators.slice(0, 12).map(c =>
-      `<a onclick="window.__mcnSelectById('${c.name.replace(/'/g, "\\'")}')" style="color:${COLLAB_COLOR}">${c.name}</a>` +
-      `<span class="detail-collab-count">${c.papers}</span>`
-    ).join("");
-    const collabExtra = collaborators.length > 12 ? ` + ${collaborators.length - 12} more` : "";
+
+    // Each row: the co-author's name (click → jump to their node, as
+    // elsewhere in this panel) and their paper count (click → expand a list
+    // of the papers they share, pulled from the cached sample titles).
+    const COLLABS_VISIBLE = 8;
+    function collabRowHtml(c) {
+      const key = [d.id, c.name].sort().join("|||");
+      const edge = collabPairMap.get(key);
+      const titles = (edge && edge.sampleTitles) || [];
+      const shownHtml = titles.map(t =>
+        `<div class="detail-collab-paper">${t.title}${t.year ? ` <span class="detail-collab-paper-year">(${t.year})</span>` : ""}</div>`
+      ).join("");
+      const remaining = c.papers - titles.length;
+      const moreHtml = remaining > 0
+        ? `<div class="detail-collab-paper detail-collab-paper-more">+ ${remaining} more paper${remaining !== 1 ? "s" : ""} not shown</div>`
+        : "";
+      const body = shownHtml || moreHtml
+        ? shownHtml + moreHtml
+        : `<div class="detail-collab-paper detail-collab-paper-more">No titles cached for this pair</div>`;
+      return `<div class="detail-collab-row">
+        <a onclick="window.__mcnSelectById('${c.name.replace(/'/g, "\\'")}')" style="color:${COLLAB_COLOR}">${c.name}</a>
+        <span class="detail-collab-count" title="Click to see shared papers"
+              onclick="this.nextElementSibling.classList.toggle('open')">${c.papers}</span>
+        <div class="detail-collab-papers">${body}</div>
+      </div>`;
+    }
+    const collabRowsVisible = collaborators.slice(0, COLLABS_VISIBLE).map(collabRowHtml).join("");
+    const collabHidden = collaborators.slice(COLLABS_VISIBLE);
+    const collabRowsHidden = collabHidden.map(collabRowHtml).join("");
+    const collabToggle = collabHidden.length
+      ? `<a class="detail-collab-toggle" data-more-count="${collabHidden.length}" onclick="
+          var box = this.previousElementSibling;
+          var opening = box.style.display !== 'block';
+          box.style.display = opening ? 'block' : 'none';
+          this.textContent = opening ? 'Show less' : ('+ ' + this.dataset.moreCount + ' more');
+        ">+ ${collabHidden.length} more</a>`
+      : "";
 
     // Scholarly identity links, when this person was resolved.
     const ident = RESOLVED[d.name] || null;
@@ -748,7 +780,9 @@
       ${collaborators.length > 0 ? `
       <div class="detail-section">
         <div class="detail-section-title">Co-authors (${collaborators.length})</div>
-        <div class="detail-collabs">${collabList}${collabExtra}</div>
+        <div class="detail-collabs">${collabRowsVisible}</div>
+        <div class="detail-collabs detail-collabs-hidden">${collabRowsHidden}</div>
+        ${collabToggle}
       </div>` : ""}
 
       ${neighborNodes.length > 0 ? `
