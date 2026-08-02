@@ -55,30 +55,54 @@ COHORT_URLS = {
     2017: f"{BASE_URL}/people-and-courses/course/methods-computational-neuroscience",
 }
 
-# Role label normalisation — archive uses various capitalizations/spellings
+# Role label normalisation — archive uses various capitalizations, spellings,
+# AND PLURALIZATIONS across years — a raw exact-match lookup against only the
+# singular forms silently miscategorized a lot of people as "student" for
+# years whose page happened to use a variant this map didn't cover (found by
+# auditing every year's raw HTML: 1990/1991 used "Lecturer/Instructor" for
+# what other years call Faculty; 1992 used "Computer Manager"; 2009 pluralized
+# every label ("Lecturers", "Course Directors", "Teaching Assistants",
+# "Students"); 2017 is served from a different URL/template with its own
+# vocabulary entirely). All of those variants are covered below; see
+# handle_data()'s warning if a *new* one shows up in a future scrape.
 ROLE_MAP = {
     "student":          "student",
+    "students":         "student",
     "faculty":          "faculty",
     "lecturer":         "lecturer",
+    "lecturers":        "lecturer",
     "teaching assistant": "ta",
+    "teaching assistants": "ta",
     "ta":               "ta",
     "director":         "director",
     "course director":  "director",
+    "course directors": "director",
     "co-director":      "director",
     "lab instructor":   "lecturer",
     "course assistant": "assistant",
     "course coordinator": "assistant",
     "coordinator":      "assistant",
+    "computer manager": "assistant",
     "observer":         "student",   # treat observers as students
     "research assistant": "ta",
+    # 1990/1991 used a single combined label for what other years call
+    # "Faculty" — confirmed by cross-referencing the same names' roles in
+    # adjacent years (Sejnowski, Van Essen, Miller, et al.).
+    "lecturer/instructor": "faculty",
+    # 2017-page vocabulary:
+    "course lecturer":  "lecturer",
+    "scientific course consultant": "faculty",
+    "chief scientific course consultant (formerly course section leader)": "faculty",
+    "research facilitator": "ta",
 }
 
 
 class AttendeeParser(HTMLParser):
     """Parse MBL archive HTML and extract role→[name] mappings."""
 
-    def __init__(self):
+    def __init__(self, year=None):
         super().__init__()
+        self.year = year
         self.cohort = {
             "directors": [],
             "faculty": [],
@@ -89,6 +113,7 @@ class AttendeeParser(HTMLParser):
         }
         self._in_li = False
         self._current_role = None
+        self._current_role_raw = None
         self._current_name = None
         self._capture_text = False
         self._depth = 0
@@ -98,6 +123,7 @@ class AttendeeParser(HTMLParser):
         if tag == "li":
             self._in_li = True
             self._current_role = None
+            self._current_role_raw = None
             self._current_name = None
         if tag == "a" and self._in_li:
             href = attrs_dict.get("href", "")
@@ -118,10 +144,10 @@ class AttendeeParser(HTMLParser):
         if self._in_li:
             # Role labels come before the <a> tag in the li text
             lower = data.lower()
-            for key, val in ROLE_MAP.items():
-                if lower == key:
-                    self._current_role = val
-                    return
+            if lower in ROLE_MAP:
+                self._current_role = ROLE_MAP[lower]
+                self._current_role_raw = data
+                return
             # Name inside <a>
             if self._capture_text:
                 self._current_name = data
@@ -130,10 +156,19 @@ class AttendeeParser(HTMLParser):
     def _flush(self):
         if not self._current_name:
             return
-        role = self._current_role or "student"
         name = self._current_name.strip()
         if not name:
             return
+        if self._current_role is None:
+            # An unrecognized role label — falling back to "student" here would
+            # silently mislabel people (this happened for the entire 2017 page
+            # before its role vocabulary was added to ROLE_MAP). Warn loudly so
+            # a future vocabulary change gets noticed immediately instead of
+            # baked silently into data.js.
+            print(f"  ! unmapped role {self._current_role_raw!r} for {name!r} "
+                  f"(year {self.year}) — defaulting to student; add it to ROLE_MAP",
+                  file=sys.stderr)
+        role = self._current_role or "student"
         bucket = {
             "director":  "directors",
             "faculty":   "faculty",
@@ -156,7 +191,7 @@ def fetch_cohort(year, url, retries=3, delay=1.5):
             })
             with urllib.request.urlopen(req, timeout=15) as resp:
                 html = resp.read().decode("utf-8", errors="replace")
-            parser = AttendeeParser()
+            parser = AttendeeParser(year=year)
             parser.feed(html)
             return parser.cohort
         except urllib.error.HTTPError as e:
