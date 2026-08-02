@@ -111,13 +111,17 @@
   }
 
   // ── State ──────────────────────────────────
+  // Defaults favor a lighter, curated first view: students only (fewer nodes
+  // to simulate/render), co-authorship edges (sparser than the co-attendance
+  // cliques), colored by research domain. Each falls back gracefully if the
+  // data it needs isn't available.
   let state = {
     selectedYears: new Set(["all"]),
-    selectedRole:  "all",
+    selectedRole:  "student",
     // Edge layer to display: "attend" (co-attendance), "collab" (co-authorship),
-    // or "both". Default to showing both when co-authorship data is present.
-    edgeMode:      HAS_COLLABS ? "both" : "attend",
-    colorBy:       "year",
+    // or "both".
+    edgeMode:      HAS_COLLABS ? "collab" : "attend",
+    colorBy:       HAS_DOMAINS ? "domain" : "year",
     selectedDomain:"all",
     layout:        "force",
     searchQuery:   "",
@@ -864,6 +868,7 @@
   // ── Role buttons ───────────────────────────
   function initRoleButtons() {
     document.querySelectorAll("#rolePills .role-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.role === state.selectedRole);
       btn.onclick = () => {
         document.querySelectorAll("#rolePills .role-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
@@ -902,6 +907,7 @@
   // ── Color-by buttons ───────────────────────
   function initColorByButtons() {
     document.querySelectorAll("#colorByPills .role-btn").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.colorby === state.colorBy);
       btn.onclick = () => {
         document.querySelectorAll("#colorByPills .role-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
