@@ -54,6 +54,15 @@
   // edges land on the same node the person is drawn as.
   function canon(name) { return ALIASES[name] || name; }
 
+  // careerInfo is hand-curated and may use a spelling that itself has an
+  // alias (e.g. "Terrence Sejnowski" while the canonical node is "Terrence J
+  // Sejnowski") — re-key it through canon() once so lookups by canonical name
+  // always find it, regardless of which variant a curator typed.
+  const CAREER_INFO = {};
+  for (const [name, info] of Object.entries(MCN_DATA.careerInfo || {})) {
+    CAREER_INFO[canon(name)] = info;
+  }
+
   // Fast lookup: "canonA|||canonB" (sorted) → { papers, years, titles }.
   const collabPairMap = new Map();
   if (COLLABS && COLLABS.edges) {
@@ -546,7 +555,7 @@
   function showTooltip(event, d) {
     const tip = document.getElementById("tooltip");
     tip.classList.remove("hidden");
-    const career = MCN_DATA.careerInfo[d.name] || null;
+    const career = CAREER_INFO[d.name] || null;
     const yearChips = [...d.years].sort().map(y => {
       const yc = yearColor(y);
       return `<span class="tooltip-year-chip" style="background:${yc}22;color:${yc};border:1px solid ${yc}44">${y}</span>`;
@@ -629,29 +638,24 @@
 
   function openDetail(d) {
     const panel = document.getElementById("detailPanel");
-    const career = MCN_DATA.careerInfo[d.name] || null;
+    const career = CAREER_INFO[d.name] || null;
     const initials = d.name.split(" ").map(p => p[0]).slice(0,2).join("");
     const color = nodeColor(d);
 
-    // Find cohort-mates
-    const cohortMates = {};
-    for (const year of d.years) {
-      const cohort = MCN_DATA.cohorts[year];
-      if (!cohort) continue;
-      const all = [...(cohort.directors||[]), ...(cohort.faculty||[]),
-                   ...(cohort.lecturers||[]), ...(cohort.tas||[]), ...(cohort.students||[])];
-      cohortMates[year] = all.filter(n => n !== d.name);
-    }
-
+    // Per-year role a person held that year. Roster arrays store the RAW
+    // scraped spelling for that year (which can differ from this person's
+    // canonical name — e.g. "Terrance Sejnowski" in the 90s vs. the canonical
+    // "Terrence J Sejnowski"), so membership must be checked through canon(),
+    // not by comparing raw strings directly against d.name.
+    const has = (arr, name) => (arr || []).some(n => canon(n) === name);
     const yearsRows = [...d.years].sort().map(y => {
-      let role = "attendee";
+      let role = "Student";
       const cohort = MCN_DATA.cohorts[y];
       if (cohort) {
-        if ((cohort.directors||[]).includes(d.name)) role = "Director";
-        else if ((cohort.faculty||[]).includes(d.name)) role = "Faculty";
-        else if ((cohort.lecturers||[]).includes(d.name)) role = "Lecturer";
-        else if ((cohort.tas||[]).includes(d.name)) role = "TA";
-        else role = "Student";
+        if (has(cohort.directors, d.name)) role = "Director";
+        else if (has(cohort.faculty, d.name)) role = "Faculty";
+        else if (has(cohort.lecturers, d.name)) role = "Lecturer";
+        else if (has(cohort.tas, d.name)) role = "TA";
       }
       return `<div class="detail-year-row">
         <div class="detail-year-dot" style="background:${yearColor(y)}"></div>
@@ -780,7 +784,7 @@
     }
     const hits = new Set();
     for (const n of allNodes) {
-      const career = MCN_DATA.careerInfo[n.name];
+      const career = CAREER_INFO[n.name];
       const haystack = [n.name, career?.affiliation, career?.role].filter(Boolean).join(" ").toLowerCase();
       if (haystack.includes(q)) hits.add(n.id);
     }
