@@ -67,3 +67,5 @@ octave-workspace
 
 # Claude
 .claude
+
+logs/*

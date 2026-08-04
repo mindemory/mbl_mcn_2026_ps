@@ -1,0 +1,14 @@
+model_params:
+  continuous: true
+  dt: 1
+  loss: mse
+  n_inp: 2
+  n_out: 1
+  n_rec: 64
+  nonlin: tanh
+  seed: 8
+  sigma: 0.0001
+  tau: 10
+train_params:
+  learning_rate: 0.0001
+  optimizer: adam
